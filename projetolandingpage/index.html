@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuro Hoje!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&family=Mitr:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="futurohojefav.png" type="image/x-icon">
+    <meta name="description" content="Rede financeira de investimentos capitais.">
+    <meta name="keywords" content="investimentos, hoje, futuro, dinheiro, investir">
+    <meta property="og:title" content="Futuro Hoje" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.futurohoje.com/" />
+    <meta property="og:image" content="http://www.futurohoje.com/futurohoje.png"/>
+    <meta property="og:description" content="Rede de investimentos finaceiros" /> 
+    <meta property="og:locale" content="pt_BR" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<header>
+    <button onclick="toggleDarkMode()"><span class="material-symbols-outlined">
+        dark_mode
+        </span></button>
+</header>
+<body>
+    <main>
+        <div id="topo">
+                <object id="futuroicone" data="futurohoje.svg" type="image/svg+xml">Seu navegador não suporta SVG</object>
+                <h1>FUTURO <br>HOJE</h1>
+        </div>
+        <article>
+            Procurando mudar a maneira<br> de investir seu dinheiro?<br>
+            Seja mais um de nossos <br>investidores de sucesso!<br>
+            Transforme seus sonhos em realidade!
+            <div id="futurpara">
+                <p>Comece a pensar<br> no futuro desde já!</p>
+                <p>Crie sua conta agora <br>e começe a investir!</p>
+            </div>
+        </article>
+        <form action="" method="post">
+            <div class="linha">
+                <div class="coluna">
+                    <label for="fname">Nome</label>
+                    <input id="fname" type="text">
+                </div>
+                <div class="coluna">
+                    <label for="sname">Sobrenome</label>
+                    <input id="sname" type="text">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="coluna">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" required>
+                </div>
+                <div class="coluna">
+                    <label for="senha">Senha</label>
+                    <input id="senha" type="password" required>
+                </div>
+            </div>
+                <div id="botao" class="linha">
+                    <p>Ao Clicar em "Criar Conta" <br>você concorda com<br>nossos <a href="termos.html">termos de serviços</a> e <br><a href="privacidade.html">política de privacidade</a></p>
+                    <input type="submit" value="Criar conta">
+                </div>
+        </form>
+    </main>
+    <footer>
+        Já possui uma conta? <a href="">Faça Login</a>
+    </footer>
+</body>
+<script>
+    function toggleDarkMode() {
+var body = document.body;
+body.classList.toggle("dark-mode");
+}
+</script>
+</html>

@@ -1,0 +1,124 @@
+:root{
+    --cor-de-fundo-light: antiquewhite;
+    --cor-da-fonte-light: rgb(46, 46, 46);
+
+    --cor-de-fundo-dark: rgb(46, 46, 46);
+    --cor-da-fonte-dark: antiquewhite;
+
+    --cor-botoes: green;
+}
+header{
+    position: absolute;
+    right: 0;
+}
+a{
+    transition: ease 1s;
+    color: var(--cor-da-fonte-light);
+}
+body.dark-mode a{
+    transition: ease 1s;
+    color: var(--cor-da-fonte-dark);
+}
+button{
+    transition: ease 1s;
+    border: none;
+    color: var(--cor-da-fonte-light);
+    background-color: var(--cor-de-fundo-light);
+}
+body.dark-mode button{
+    transition: ease 1s;
+    border: none;
+    color: var(--cor-da-fonte-dark);
+    background-color: var(--cor-de-fundo-dark);
+}
+body{
+    transition: ease 1s;
+    color:var(--cor-da-fonte-light);
+    background-color: var(--cor-de-fundo-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    font-family: 'Afacad', sans-serif;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+body.dark-mode {
+    transition: ease 1s;
+    color: var(--cor-da-fonte-dark);
+    background-color: var(--cor-de-fundo-dark);
+  }
+  
+main{
+    display: flex;
+    flex-direction: column;
+
+    width: 60%;
+    min-width: 300px;
+    height: 100%;
+}
+#futuroicone{
+    width: 120px;
+}
+#topo{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#futurpara p{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#futurpara{
+    font-weight: 700;
+    font-size: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-size: 50%;
+}
+#botao input{
+    transition: ease 1s;
+    border-radius: 5px;
+    height: 40px;
+    background-color: var(--cor-botoes);
+}
+#botao input:hover{
+    transition: ease 1s;
+    color: aliceblue;
+    background-color: brown;
+}
+
+.linha{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.coluna{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.linha p{
+    padding-right: 2px;
+    font-size: 50%;
+}
+
