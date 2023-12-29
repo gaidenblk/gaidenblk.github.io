@@ -21,9 +21,7 @@
 </head>
 
 <header>
-    <button onclick="toggleDarkMode()"><span class="material-symbols-outlined">
-        dark_mode
-        </span></button>
+    <button id="buttonMode" class="material-symbols-outlined" onclick="toggleDarkMode()">dark_mode</button>
 </header>
 <body>
     <main>
@@ -75,6 +73,13 @@
     function toggleDarkMode() {
 var body = document.body;
 body.classList.toggle("dark-mode");
+
+var buttonMode = document.getElementById("buttonMode")
+if(body.classList.contains("dark-mode")){
+    buttonMode.textContent = "light_mode"
+}else{
+    buttonMode.textContent = "dark_mode"
+}
 }
 </script>
 </html>
