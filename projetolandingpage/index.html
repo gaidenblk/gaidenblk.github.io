@@ -29,7 +29,7 @@
                 <object id="futuroicone" data="futurohoje.svg" type="image/svg+xml">Seu navegador não suporta SVG</object>
                 <h1>FUTURO <br>HOJE</h1>
         </div>
-        <article>
+        <section>
             Procurando mudar a maneira<br> de investir seu dinheiro?<br>
             Seja mais um de nossos <br>investidores de sucesso!<br>
             Transforme seus sonhos em realidade!
@@ -37,7 +37,7 @@
                 <p>Comece a pensar<br> no futuro desde já!</p>
                 <p>Crie sua conta agora <br>e começe a investir!</p>
             </div>
-        </article>
+        </section>
         <form action="" method="post">
             <div class="linha">
                 <div class="coluna">
@@ -51,19 +51,37 @@
             </div>
             <div class="linha">
                 <div class="coluna">
+                    <label for="user">Nome de Usuário</label>
+                    <input id="user" type="text" required>
+                </div>
+                <div class="coluna">
                     <label for="email">E-mail</label>
                     <input id="email" type="email" required>
                 </div>
+            </div>
+            <div class="linha">
                 <div class="coluna">
                     <label for="senha">Senha</label>
                     <input id="senha" type="password" required>
                 </div>
-            </div>
-                <div id="botao" class="linha">
-                    <p>Ao Clicar em "Criar Conta" <br>você concorda com<br>nossos <a href="termos.html">termos de serviços</a> e <br><a href="privacidade.html">política de privacidade</a></p>
-                    <input type="submit" value="Criar conta">
+                <div class="coluna">
+                    <label for="confsenha">Confirmar Senha</label>
+                    <input id="confsenha" type="password" required>
                 </div>
+            </div>
+            <div id="botao" class="linha">
+                <p>Ao Clicar em "Criar Conta" <br>você concorda com<br>nossos <a href="termos.html">termos de serviços</a> e <br><a href="privacidade.html">política de privacidade</a></p>
+                <input type="submit" value="Criar conta">
+            </div>
         </form>
+        <article>
+            <p>A Futuro Hoje tem transformado <br>a vida de muitos de seus investidores<br> simplesmente mudando a<br> forma de investir seu capital!</p>
+            <div id="depoimentos">
+                <p>"Eu não fazia ideia de quanto dinheiro estava deixando de ganhar por dia!"<br> -Wallace G.</p>
+                <p>"Precisava de uma maneira nova de investir meu dinheiro, e encontrei a que mais se adequa às minhas necessidades!"<br> -Diana P.</p>
+                <p>"Diversificar minha carteira de investimentos é a maneira mais inteligente de acumular capital!"<br> -Roger S.</p>
+            </div>
+        </article>
     </main>
     <footer>
         Já possui uma conta? <a href="">Faça Login</a>

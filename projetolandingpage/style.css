@@ -1,14 +1,12 @@
 :root{
     --cor-de-fundo-light: antiquewhite;
-    --cor-da-fonte-light: rgb(46, 46, 46);
+    --cor-da-fonte-light: rgb(34, 31, 202);
 
     --cor-de-fundo-dark: rgb(46, 46, 46);
-    --cor-da-fonte-dark: antiquewhite;
-
-    --cor-botoes: green;
+    --cor-da-fonte-dark: aliceblue;
 }
 header{
-    position: absolute;
+    position: fixed;
     right: 0;
 }
 a{
@@ -19,13 +17,13 @@ body.dark-mode a{
     transition: ease 1s;
     color: var(--cor-da-fonte-dark);
 }
-button{
+#buttonMode{
     transition: ease 1s;
     border: none;
     color: var(--cor-da-fonte-light);
     background-color: var(--cor-de-fundo-light);
 }
-body.dark-mode button{
+body.dark-mode #buttonMode{
     transition: ease 1s;
     border: none;
     color: var(--cor-da-fonte-dark);
@@ -53,8 +51,7 @@ body.dark-mode {
 main{
     display: flex;
     flex-direction: column;
-
-    width: 60%;
+    width: 70%;
     min-width: 300px;
     height: 100%;
 }
@@ -75,14 +72,30 @@ main{
 #futurpara{
     font-weight: 700;
     font-size: 25px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+#depoimentos{
+    border-radius: 3px;
+    font-size: 16px;
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 50px;
+}
+
+#depoimentos p{
+    padding: 20px;
+    min-width: 190px;
+    height: 100px;
+    margin: 10px;
+    margin-top: 0;
+}
+
 form{
     display: flex;
     flex-direction: column;
@@ -90,16 +103,18 @@ form{
 label{
     font-size: 50%;
 }
+#botao{
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
 #botao input{
     transition: ease 1s;
     border-radius: 5px;
     height: 40px;
-    background-color: var(--cor-botoes);
-}
-#botao input:hover{
-    transition: ease 1s;
+    background-color:rgb(48, 48, 216);
     color: aliceblue;
-    background-color: brown;
 }
 
 .linha{
@@ -121,4 +136,3 @@ label{
     padding-right: 2px;
     font-size: 50%;
 }
-
