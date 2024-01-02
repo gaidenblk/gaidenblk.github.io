@@ -46,7 +46,7 @@ body.dark-mode {
     transition: ease 1s;
     color: var(--cor-da-fonte-dark);
     background-color: var(--cor-de-fundo-dark);
-  }
+}
   
 main{
     display: flex;
@@ -81,13 +81,11 @@ main{
     flex-wrap: wrap;
 }
 #depoimentos{
-    border-radius: 3px;
     font-size: 16px;
     display: flex;
     overflow-x: auto;
     margin-bottom: 50px;
 }
-
 #depoimentos p{
     padding: 20px;
     min-width: 190px;
@@ -95,7 +93,6 @@ main{
     margin: 10px;
     margin-top: 0;
 }
-
 form{
     display: flex;
     flex-direction: column;
@@ -116,14 +113,12 @@ label{
     background-color:rgb(48, 48, 216);
     color: aliceblue;
 }
-
 .linha{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
 }
 .coluna{
     display: flex;
