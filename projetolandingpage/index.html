@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuro Hoje!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Afacad&family=Mitr:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="futurohojefav.png" type="image/x-icon">
-    <meta name="description" content="Rede financeira de investimentos capitais.">
-    <meta name="keywords" content="investimentos, hoje, futuro, dinheiro, investir">
-    <meta property="og:title" content="Futuro Hoje" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://www.futurohoje.com/" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/gaidenblk/gaidenblk.github.io/main/projetolandingpage/futurohoje.png"/>
-    <meta property="og:description" content="Rede de investimentos financeiros" /> 
-    <meta property="og:locale" content="pt_BR" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="icon" href="futurohojefav.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&family=Mitr:wght@500&display=swap" rel="stylesheet">
+
+    <!-- HTML Meta Tags -->
+    <title>Futuro Hoje</title>
+    <meta name="description" content="Rede de investimentos financeiros">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://gaidenblk.github.io/projetolandingpage/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Futuro Hoje">
+    <meta property="og:description" content="Rede de investimentos financeiros">
+    <meta property="og:image" content="https://raw.githubusercontent.com/gaidenblk/gaidenblk.github.io/main/projetolandingpage/futurohoje.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="gaidenblk.github.io">
+    <meta property="twitter:url" content="https://gaidenblk.github.io/projetolandingpage/">
+    <meta name="twitter:title" content="Futuro Hoje">
+    <meta name="twitter:description" content="Rede de investimentos financeiros">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/gaidenblk/gaidenblk.github.io/main/projetolandingpage/futurohoje.png">
+
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+        
 </head>
 
 <header>
@@ -26,7 +39,10 @@
 <body>
     <main>
         <div id="topo">
+            <div>
+                <canvas id="meuCanvas" width="130" height="125"></canvas>
                 <img id="futuroicone" src="futurohoje.png" alt="Futuro Hoje Logo">
+            </div>
                 <h1>FUTURO <br>HOJE</h1>
         </div>
         <section>
@@ -100,5 +116,40 @@ if(body.classList.contains("dark-mode")){
     buttonMode.textContent = "dark_mode"
 }
 }
+
+var canvas = document.getElementById('meuCanvas');
+var ctx = canvas.getContext('2d');
+var x = 65;
+var y = 60
+
+var angulo1 = 0;
+var angulo2 = 45;
+
+function desenha() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.rotate(angulo1 * Math.PI / 180);
+  ctx.fillStyle = 'rgba(250, 235, 215, 0.5)';
+  ctx.fillRect(-50, -50, 100, 100);
+  ctx.restore();
+
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.rotate(angulo2 * Math.PI / 180);
+  ctx.fillStyle = 'rgba(250, 235, 215, 0.5)';
+  ctx.fillRect(-50, -50, 100, 100);
+  ctx.restore();
+
+  angulo1++;
+  angulo2++;
+
+  requestAnimationFrame(desenha);
+}
+// Inicia a animação
+desenha();
+
+
 </script>
 </html>

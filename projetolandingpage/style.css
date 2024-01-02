@@ -55,6 +55,10 @@ main{
 #futuroicone{
     width: 130px;
     height: 130px;
+    position: relative;
+}
+canvas{
+    position: absolute;
 }
 #topo{
     display: flex;
