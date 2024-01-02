@@ -49,11 +49,12 @@ main{
     display: flex;
     flex-direction: column;
     width: 70%;
-    min-width: 300px;
+    min-width: 330px;
     height: 100%;
 }
 #futuroicone{
-    width: 120px;
+    width: 130px;
+    height: 130px;
 }
 #topo{
     display: flex;
