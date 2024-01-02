@@ -36,18 +36,15 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     font-family: 'Afacad', sans-serif;
     text-align: center;
     font-size: 1.3rem;
 }
-
 body.dark-mode {
     transition: ease 1s;
     color: var(--cor-da-fonte-dark);
     background-color: var(--cor-de-fundo-dark);
 }
-  
 main{
     display: flex;
     flex-direction: column;
@@ -130,4 +127,7 @@ label{
 .linha p{
     padding-right: 2px;
     font-size: 50%;
+}
+footer{
+    font-size: 10px;
 }
