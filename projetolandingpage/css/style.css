@@ -5,10 +5,6 @@
     --cor-de-fundo-dark: rgb(46, 46, 46);
     --cor-da-fonte-dark: aliceblue;
 }
-header{
-    position: fixed;
-    right: 0;
-}
 a{
     transition: ease 1s;
     color: var(--cor-da-fonte-light);
@@ -18,6 +14,8 @@ body.dark-mode a{
     color: var(--cor-da-fonte-dark);
 }
 #buttonMode{
+    position: fixed;
+    right: 0;
     transition: ease 1s;
     border: none;
     color: var(--cor-da-fonte-light);
@@ -135,4 +133,7 @@ label{
 }
 footer{
     font-size: 10px;
+}
+#login{
+    font-size: 1.3rem;
 }

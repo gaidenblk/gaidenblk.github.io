@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="icon" href="futurohojefav.png" type="image/x-icon">
+    <link rel="icon" href="img/futurohojefav.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Afacad&family=Mitr:wght@500&display=swap" rel="stylesheet">
 
     <!-- HTML Meta Tags -->
@@ -35,15 +35,16 @@
 
 <header>
     <button id="buttonMode" class="material-symbols-outlined" onclick="toggleDarkMode()">dark_mode</button>
+    <div id="topo">
+        <div>
+            <canvas id="meuCanvas" width="130" height="125"></canvas>
+            <img id="futuroicone" src="img/futurohoje.png" alt="Futuro Hoje Logo">
+        </div>
+            <h1>FUTURO <br>HOJE</h1>
 </header>
 <body>
     <main>
-        <div id="topo">
-            <div>
-                <canvas id="meuCanvas" width="130" height="125"></canvas>
-                <img id="futuroicone" src="futurohoje.png" alt="Futuro Hoje Logo">
-            </div>
-                <h1>FUTURO <br>HOJE</h1>
+
         </div>
         <section>
             Procurando mudar a maneira<br> de investir seu dinheiro?<br>
@@ -98,9 +99,11 @@
                 <p>"Diversificar minha carteira de investimentos é a maneira mais inteligente de acumular capital!"<br> <i>-Roger S.</i></p>
             </div>
         </article>
-            <p>Já possui uma conta? <a href="">Faça Login</a><br></p>
     </main>
     <footer>
+        <div id="login">
+            Já possui uma conta? <a href="">Faça Login</a><br>
+        </div>
         Criado e desenvolvido por @gaidenblk softworks - 2024 - Todos os direitos reservados
     </footer>
 </body>
