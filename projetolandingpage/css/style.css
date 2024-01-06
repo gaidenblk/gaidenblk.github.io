@@ -6,6 +6,7 @@
     --cor-da-fonte-dark: aliceblue;
 }
 a{
+    text-decoration: none;
     transition: ease 1s;
     color: var(--cor-da-fonte-light);
 }
@@ -132,7 +133,7 @@ label{
     font-size: 50%;
 }
 footer{
-    font-size: 10px;
+    font-size: 12px;
 }
 #login{
     font-size: 1.3rem;
