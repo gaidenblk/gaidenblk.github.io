@@ -5,6 +5,14 @@
     --cor-de-fundo-dark: rgb(46, 46, 46);
     --cor-da-fonte-dark: aliceblue;
 }
+#voltarParaHome{
+    transition: ease 1s;
+    position: absolute;
+    left: 0;
+    border: none;
+    color: var(--cor-da-fonte-light);
+    background-color: var(--cor-de-fundo-light);
+}
 a{
     text-decoration: none;
     transition: ease 1s;
@@ -28,7 +36,13 @@ body.dark-mode #buttonMode{
     color: var(--cor-da-fonte-dark);
     background-color: var(--cor-de-fundo-dark);
 }
-body{
+body.dark-mode #voltarParaHome{
+    transition: ease 1s;
+    border: none;
+    color: var(--cor-da-fonte-dark);
+    background-color: var(--cor-de-fundo-dark);
+}
+    body{
     transition: ease 1s;
     color:var(--cor-da-fonte-light);
     background-color: var(--cor-de-fundo-light);
