@@ -1,0 +1,14 @@
+body{display: flex;}
+div{
+    transition: ease 0.4s;
+    border: 5px solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100px;
+    height: 100px;
+}
+#omelete{
+    border-color: red;
+}

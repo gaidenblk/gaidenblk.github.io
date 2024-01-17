@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/exercicio-6.css">
+    <title>Exercício 6</title>
+</head>
+<body>
+    <div id="cores">
+        Cores Fundo
+        <div id="caixaCoresFundo">
+            <div class="caixinhaCor">
+            </div>
+            <div class="caixinhaCor">
+            </div>
+            <div class="caixinhaCor">
+            </div>
+            <div class="caixinhaCor">
+            </div>
+        </div>
+        Cores Fonte
+        <div id="caixaCoresFonte">
+            <div class="caixinhaCor">
+            </div>
+            <div class="caixinhaCor">
+            </div>
+            <div class="caixinhaCor">
+            </div>
+            <div class="caixinhaCor">
+            </div>
+        </div>
+    </div>
+    <div id="texto">
+        <h2>Texto h2</h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint reprehenderit cumque deleniti placeat optio perspiciatis unde voluptate commodi, animi cum vero quaerat nemo alias dolore veritatis magni? Ipsa, earum veniam.
+        </p>
+    </div>
+    <div style="position: absolute; bottom: 550px;">
+        Voltar para o <a href="index.html">Inicio</a>
+    </div>
+    <script>
+        let coresFundo = document.querySelector("#caixaCoresFundo");
+        let corFnd1 = coresFundo.querySelector(":nth-child(1)");
+        let corFnd2 = coresFundo.querySelector(":nth-child(2)");
+        let corFnd3 = coresFundo.querySelector(":nth-child(3)");
+        let corFnd4 = coresFundo.querySelector(":nth-child(4)");
+
+        let coresFonte = document.querySelector("#caixaCoresFonte");
+        let corFnt1 = coresFonte.querySelector(":nth-child(1)");
+        let corFnt2 = coresFonte.querySelector(":nth-child(2)");
+        let corFnt3 = coresFonte.querySelector(":nth-child(3)");
+        let corFnt4 = coresFonte.querySelector(":nth-child(4)");
+
+        let texto = document.querySelector("#texto")
+
+        function mudaCorFundo(corParametro){
+            texto.style.background = corParametro;
+        }
+        function mudaCorFonte(corParametro){
+            texto.style.color = corParametro;
+        }
+
+        corFnd1.addEventListener("click", function(){
+            mudaCorFundo("rgb(94, 104, 116)");
+        });
+        corFnd2.addEventListener("click", function() {
+            mudaCorFundo("rgb(120, 192, 141)");
+        });
+        corFnd3.addEventListener("click", function(){
+            mudaCorFundo("rgb(52, 127, 212)");
+        });
+        corFnd4.addEventListener("click", function() {
+            mudaCorFundo("rgb(243, 145, 145)");
+        });
+
+        corFnt1.addEventListener("click", function(){
+            mudaCorFonte("rgb(28, 77, 134)");
+        });
+        corFnt2.addEventListener("click", function() {
+            mudaCorFonte("rgb(165, 37, 133)");
+        });
+        corFnt3.addEventListener("click", function(){
+            mudaCorFonte("rgb(9, 150, 56)");
+        });
+        corFnt4.addEventListener("click", function() {
+            mudaCorFonte("rgb(184, 159, 17)");
+        });
+    </script>
+</body>
+</html>

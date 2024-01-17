@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+<body>
+    O objetivo deste exercício é criar uma lista <br/>e ir adicionando topicos a cada vez <br/>que é clicado o botão adiciona.<br/>
+    <input id="texto" type="text">
+    <button id="adiciona">adiciona</button>
+    <ul id="listaTarefas">
+    </ul><br/>
+    Voltar para o <a href="index.html">Inicio</a>
+    <script>
+        let input = document.querySelector("#texto");
+        let adiciona = document.querySelector("#adiciona");
+        let listaTarefas = document.querySelector("#listaTarefas");
+                
+        adiciona.addEventListener("click", function(){
+            let textoArrumado = texto.value.trim().toLowerCase();
+            listaTarefas.innerHTML += `<li>${textoArrumado}</li>`;
+        })
+    </script>
+</body>
+</html>

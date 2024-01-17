@@ -1,0 +1,73 @@
+:root{
+    --cor-fnd1: rgb(94, 104, 116);
+    --cor-fnd2: rgb(120, 192, 141);
+    --cor-fnd3: rgb(52, 127, 212);
+    --cor-fnd4: rgb(243, 145, 145);
+    
+    --cor-fnt1: rgb(28, 77, 134);
+    --cor-fnt2: rgb(165, 37, 133);
+    --cor-fnt3: rgb(9, 150, 56);
+    --cor-fnt4: rgb(184, 159, 17);
+}
+body{
+    display: flex;
+}
+#texto{
+    transition: ease 0.5s;
+    border: 2px solid;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+#cores {
+    border: 2px solid;
+    margin-right: 50px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#caixaCoresFundo{
+    width: 130px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#caixaCoresFonte{
+    width: 130px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.caixinhaCor{
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+}
+#caixaCoresFundo :nth-child(1){
+    background-color: var(--cor-fnd1);
+}
+#caixaCoresFundo :nth-child(2){
+    background-color: var(--cor-fnd2);
+}
+#caixaCoresFundo :nth-child(3){
+    background-color: var(--cor-fnd3);
+}
+#caixaCoresFundo :nth-child(4){
+    background-color: var(--cor-fnd4);
+}
+#caixaCoresFonte :nth-child(1){
+    background-color: var(--cor-fnt1);
+}
+#caixaCoresFonte :nth-child(2){
+    background-color: var(--cor-fnt2);
+}
+#caixaCoresFonte :nth-child(3){
+    background-color: var(--cor-fnt3);
+}
+#caixaCoresFonte :nth-child(4){
+    background-color: var(--cor-fnt4);
+}

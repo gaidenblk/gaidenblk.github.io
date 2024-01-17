@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    O objetivo deste exercício é observar como funciona a ordem de execução do código pelo console<br/>
+    <button>Botao</button><br/>
+    Voltar para o <a href="index.html">Inicio</a>
+    <script>
+        console.log(1);
+        const button = document.querySelector("button");
+        console.log(2);
+        button.addEventListener("click", function () {
+            console.log(3);
+            console.log(4);
+        });
+        console.log(5);
+    </script>
+</body>
+</html>

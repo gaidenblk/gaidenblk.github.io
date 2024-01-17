@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/exercicio-7.css">
+    <title>Exercicio 7</title>
+</head>
+<body>
+        <div id="omelete"><img src="img/exercicio-7/omelete.png" alt="Lanche Omelete">
+        </div>
+        <div id="panquebanana"><img src="img/exercicio-7/panquebanana.png" alt="Panqueca com Banana">
+        </div>
+        <div id="paoovo"><img src="img/exercicio-7/paoovo.png" alt="Pão com Ovo">
+        </div>
+        <div id="sandubatum"><img src="img/exercicio-7/sandubatum.png" alt="Sanduiche de Atum">
+        </div>
+        <div id="vitabanana"><img src="img/exercicio-7/vitabanana.png" alt="Vitamina de Banana">
+        </div>
+        <div style="position: absolute; top: 130px; width: 150px;display: block; border: none;">
+            Voltar para o <a href="index.html">Inicio</a>
+        </div>
+    <script>
+        
+        let omelete = document.querySelector("#omelete");
+        let panquebanana = document.querySelector("#panquebanana");
+        let paoovo = document.querySelector("#paoovo");
+        let sandubatum = document.querySelector("#sandubatum");
+        let vitabanana = document.querySelector("#vitabanana");
+        
+        function removeBordas(){
+            omelete.style.borderColor = "black";
+            panquebanana.style.borderColor = "black";
+            paoovo.style.borderColor = "black";
+            sandubatum.style.borderColor = "black";
+            vitabanana.style.borderColor = "black";
+        }
+
+        omelete.addEventListener("click", function(){
+            removeBordas();
+            omelete.style.borderColor = "red";
+        });
+        panquebanana.addEventListener("click", function(){
+            removeBordas();
+            panquebanana.style.borderColor = "red";
+        });
+        paoovo.addEventListener("click", function(){
+            removeBordas();
+            paoovo.style.borderColor = "red";
+        });
+        sandubatum.addEventListener("click", function(){
+            removeBordas();
+            sandubatum.style.borderColor = "red";
+        });
+        vitabanana.addEventListener("click", function(){
+            removeBordas();
+            vitabanana.style.borderColor = "red";
+        });
+    </script>
+</body>
+</html>
