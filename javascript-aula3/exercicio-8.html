@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex; 
+            flex-direction: column;
+            flex-wrap: wrap; 
+            width: 500px; 
+            text-align: center; 
+            align-items: center;
+            justify-content: center;
+        }
+        #btnContainer{
+            display: flex;
+        }
+        .btnAlarme{
+            border: 2px solid; 
+            margin: 15px; 
+            width: 50px; 
+            height: 50px;
+            font-weight: bold;            
+            background-color: red; 
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+        #desativaAlarme{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid; 
+            margin: 15px;
+            width: 300px; 
+            height: 50px;
+            background-color: rgb(19, 146, 250);
+        }
+    </style>
+    <title>Exercício 8</title>
+</head>
+<body>
+    O objetivo do exerício é criar um alarme<br/> que é desativado por uma senha.<br/> Senha do Alarme: 114241
+    <div id="btnContainer">
+        <div id="senha1" class="btnAlarme">        
+        1</div>
+        <div id="senha2" class="btnAlarme">        
+        2</div>
+        <div id="senha3" class="btnAlarme">        
+        3</div>
+        <div id="senha4" class="btnAlarme">        
+        4</div>
+    </div>
+    <div id="desativaAlarme">
+        Desativar o Alarme
+    </div>
+    Voltar para a <a href="index.html">Lista</a><br/>
+    Voltar para o <a href="/exercicios-javascript.html">Inicio</a>
+    <script>
+        const senha1 = document.querySelector("#senha1");
+        const senha2 = document.querySelector("#senha2");
+        const senha3 = document.querySelector("#senha3");
+        const senha4 = document.querySelector("#senha4");
+
+        const desativaAlarme = document.querySelector("#desativaAlarme");
+        const senha = "114241";
+        let verificador = "";
+
+        senha1.addEventListener("click", function(){
+            verificador += "1" ;
+        });
+        senha2.addEventListener("click", function(){
+            verificador += "2" ;
+        });
+        senha3.addEventListener("click", function(){
+            verificador += "3" ;
+        });
+        senha4.addEventListener("click", function(){
+            verificador += "4" ;
+        });
+
+        desativaAlarme.addEventListener("click", function(){
+            if(verificador === senha){
+                alert("Alarme Desarmado");
+            }else{
+                alert("Senha Incorreta");
+                verificador = "";
+            }
+        })
+    </script>
+</body>
+</html>
