@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 3</title>
+  </head>
+  <body>
+    <p>
+      O objetivo deste exercício é observar como funciona a ordem de execução do
+      código pelo console
+    </p>
+    <p>A estrutura co código se encontra da seguinte forma:
+        <ul>
+            <li>console.log(1)</li>
+            <li>console.log(2)</li>
+            <ul>
+                <li>chamada da função do botão que chama esses dois logs</li>
+                <li>console.log(3)</li>
+                <li>console.log(4)</li>
+            </ul>
+            <li>console.log(5)</li>
+        </ul>
+
+        <p>Resultado esperado:</p>
+        <ul>
+            <li>console.log(1)</li>
+            <li>console.log(2)</li>
+            <li>console.log(5)</li>
+            <li>Logs que vierem depois de clicar no botão</li>
+            <li>console.log(3)</li>
+            <li>console.log(4)</li>
+        </ul>
+    </p>
+    <br />
+    <button>Botao</button><br />
+    Voltar para a <a href="../index.html">Lista</a><br />
+    Voltar para o <a href="/exercicios-javascript">Inicio</a>
+    <script src="./js/exercicio-3.js"></script>
+  </body>
+</html>

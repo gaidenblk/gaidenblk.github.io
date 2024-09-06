@@ -1,0 +1,20 @@
+#container {
+  display: flex;
+}
+
+#container > div {
+  cursor: pointer;
+  transition: ease 0.4s;
+  border: 5px solid;
+  border-radius: 5px;
+  border-color: black;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100px;
+  height: 100px;
+}
+
+.active {
+  border-color: red;
+}

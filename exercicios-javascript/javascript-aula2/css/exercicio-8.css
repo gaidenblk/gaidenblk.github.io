@@ -1,0 +1,55 @@
+button {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(41, 150, 108);
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  margin-right: 10px;
+}
+#containerModal {
+  display: none;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.445);
+}
+#modalEbook {
+  font-size: 0.7rem;
+  display: none;
+  background-color: white;
+  padding: 20px;
+  top: 100px;
+  left: 20%;
+  position: absolute;
+  width: 350px;
+  border-radius: 15px;
+}
+#botaoFecha {
+  cursor: pointer;
+  color: red;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+#modalEbook {
+  border: 2px solid;
+}
+
+#modalSucesso {
+  height: 45px;
+  display: none;
+}
+
+#formulario > div {
+  margin: 10px;
+}
+
+#buttonContainer {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
