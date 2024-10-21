@@ -1,0 +1,51 @@
+/* pre {
+  background-color: #2b2727;
+  padding: 5px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+code {
+  font-family: "Courier New", monospace;
+  color: #e4e69c;
+} */
+
+nav {
+    border: solid;
+    border-radius: 15px;
+    padding: 7px;
+    width: fit-content;
+}
+
+#linkNav {
+    margin-top: 10px;
+    background-color: aliceblue;
+}
+
+button {
+    border-radius: 15px;
+    padding: 7px;
+    outline: none;
+}
+
+input {
+    border-radius: 15px;
+    padding: 7px;
+    outline: none;
+}
+
+#explicacao {
+    border: solid blue;
+    border-radius: 15px;
+    padding: 7px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: fit-content;
+}
+
+#exercicio {
+    word-break: break-all;
+    width: fit-content;
+    border: solid purple;
+    border-radius: 15px;
+    padding: 7px;
+}

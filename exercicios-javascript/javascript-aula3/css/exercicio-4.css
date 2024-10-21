@@ -2,3 +2,7 @@ button {
   background-color: green;
   border-radius: 15px;
 }
+
+#exercicio {
+  flex-direction: column;
+}

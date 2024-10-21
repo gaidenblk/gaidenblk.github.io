@@ -10,3 +10,6 @@ function aplicaBorda(element) {
   // Aplica a borda vermelha ao elemento clicado
   element.style.borderColor = "red";
 }
+
+// Aplicando inicialmente estilo em uma div
+document.querySelector("#omelete").style.borderColor = "red";

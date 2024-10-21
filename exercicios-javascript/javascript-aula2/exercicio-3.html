@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/exercicios-javascript/main.css">
     <title>Exercício 3</title>
   </head>
-  <body>
+  <body id="content">
+    <div id="explicacao">
     <p>
       O objetivo deste exercício é observar como funciona a ordem de execução do
       código pelo console
@@ -27,15 +29,18 @@
             <li>console.log(1)</li>
             <li>console.log(2)</li>
             <li>console.log(5)</li>
-            <li>Logs que vierem depois de clicar no botão</li>
+            <li>Logs que virão depois de clicar no botão</li>
             <li>console.log(3)</li>
             <li>console.log(4)</li>
         </ul>
     </p>
-    <br />
-    <button>Botao</button><br />
-    Voltar para a <a href="../index.html">Lista</a><br />
-    Voltar para o <a href="/exercicios-javascript">Inicio</a>
+  </div>
+    <button>Botão</button>
+    <nav id="linkNav">
+      Voltar para a <a href="./index.html" class="link">Lista</a><br />
+      Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
+    </nav>
     <script src="./js/exercicio-3.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>

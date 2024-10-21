@@ -1,0 +1,4 @@
+#exercicio {
+  flex-direction: column;
+  align-content: space-around;
+}
