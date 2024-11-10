@@ -1,0 +1,28 @@
+body {
+	display: flex;
+	word-wrap: break-word;
+	flex-direction: column;
+}
+
+#divCopiada {
+	border: 2px solid;
+	border-radius: 15px;
+	padding: 5px;
+	margin: 5px;
+}
+
+#divCopia {
+	font-size: 16px;
+	border: 2px solid;
+	border-radius: 15px;
+	width: 265px;
+	padding: 5px;
+	margin: 5px;
+	min-height: 18px;
+}
+
+#exercicio {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 15px;
+}

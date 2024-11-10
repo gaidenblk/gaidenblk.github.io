@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/exercicios-javascript/main.css" />
+		<link rel="stylesheet" href="./css/exercicio-3.css" />
+		<title>Exercício 3</title>
+	</head>
+	<body id="content">
+		<div id="explicacao">
+			Faça uma página dividida em duas verticalmente. Do lado esquerdo há uma textarea,
+			do lado direito é uma div (ocupando toda a largura e altura da metade direita). Ao
+			digitar na textarea, o texto digitado é renderizado como HTML do lado direito ao
+			vivo (a cada tecla digitada, o lado direito atualiza):
+		</div>
+		<div id="exercicio">
+			<textarea
+				name="divPrincipal"
+				id="divCopiada"
+				cols="35"
+				rows="10"
+				placeholder="Digite o texto Aqui!"></textarea>
+			<div id="divCopia"></div>
+		</div>
+		<nav id="linkNav">
+			Voltar para a <a href="./index.html" class="link">Lista</a><br />
+			Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
+		</nav>
+		<script src="./js/exercicio-3.js"></script>
+		<script src="/main.js"></script>
+	</body>
+</html>

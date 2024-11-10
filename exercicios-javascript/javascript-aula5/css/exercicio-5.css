@@ -1,0 +1,11 @@
+.fundoColorido {
+	background-color: rgb(62, 164, 231);
+	border-radius: 15px;
+}
+.bordaColorida {
+	border: 2px solid blue;
+	border-radius: 15px;
+}
+input:focus {
+	outline: none;
+}

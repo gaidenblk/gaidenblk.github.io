@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/exercicios-javascript/main.css" />
+		<title>Exercício 1</title>
+	</head>
+	<body id="content">
+		<div id="explicacao">
+			<p>
+				Fa&ccedil;a uma p&aacute;gina que tem um &lt;select&gt; para o usu&aacute;rio
+				escolher um produto. Os produtos podem ser o que voc&ecirc; quiser (pelo menos
+				3). Quando o usu&aacute;rio muda o valor do &lt;select&gt;, a p&aacute;gina
+				deve exibir a imagem do produto selecionado. Exemplo: mudou para
+				&ldquo;Caf&eacute;&rdquo;, ent&atilde;o a p&aacute;gina deve exibir a imagem do
+				caf&eacute;. Note que n&atilde;o tem um bot&atilde;o &ldquo;Mostrar&rdquo;,
+				&eacute; somente o &lt;select&gt;, ao ser alterado ele automaticamente causa a
+				mudan&ccedil;a da imagem exibida.
+			</p>
+		</div>
+		<div id="exercicio">
+			<select name="fotoLanche" id="fotoLanche">
+				<option value="lanche1" label="Omelete"></option>
+				<option value="lanche2" label="Panqueca"></option>
+				<option value="lanche3" label="Pão c/ ovo"></option>
+			</select>
+			<div id="container">
+				<img src="./img/lanche1.png" alt="Omelete" />
+			</div>
+		</div>
+		<nav id="linkNav">
+			Voltar para a <a href="./index.html" class="link">Lista</a><br />
+			Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
+		</nav>
+		<script src="./js/exercicio-1.js"></script>
+		<script src="/main.js"></script>
+	</body>
+</html>

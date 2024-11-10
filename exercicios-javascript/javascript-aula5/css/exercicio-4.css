@@ -1,0 +1,11 @@
+.telefoneInvalido {
+	color: red;
+	border: 2px solid red;
+}
+.telefoneValido {
+	color: green;
+	border: 2px solid green;
+}
+#textoValidador {
+	border: none;
+}
