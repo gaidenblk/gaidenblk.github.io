@@ -9,43 +9,72 @@ code {
   color: #e4e69c;
 } */
 
+body {
+	transition: ease-in-out;
+}
+
 nav {
-    border: solid;
-    border-radius: 15px;
-    padding: 7px;
-    width: fit-content;
+	border: solid;
+	border-radius: 15px;
+	padding: 7px;
+	width: fit-content;
 }
 
 #linkNav {
-    margin-top: 10px;
-    background-color: aliceblue;
+	margin-top: 10px;
+	background-color: aliceblue;
 }
 
 button {
-    border-radius: 15px;
-    padding: 7px;
-    outline: none;
+	border-radius: 15px;
+	padding: 7px;
+	outline: none;
 }
 
 input {
-    border-radius: 15px;
-    padding: 7px;
-    outline: none;
+	border-radius: 15px;
+	padding: 7px;
+	outline: none;
 }
 
 #explicacao {
-    border: solid blue;
-    border-radius: 15px;
-    padding: 7px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    width: fit-content;
+	border: solid blue;
+	border-radius: 15px;
+	padding: 7px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	width: fit-content;
 }
 
 #exercicio {
-    word-break: break-all;
-    width: fit-content;
-    border: solid purple;
-    border-radius: 15px;
-    padding: 7px;
+	word-break: break-all;
+	width: fit-content;
+	border: solid purple;
+	border-radius: 15px;
+	padding: 7px;
+}
+
+/* Define a animação chamada 'moverLado' */
+/* @keyframes moverLado {
+	0% {
+		transform: translateX(110%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+} */
+
+@keyframes aparecer {
+	0% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
+/* Estilo da div e aplicação da animação */
+.anima {
+	/* animation: moverLado 1.5s ease-in; */
+	animation: aparecer 1.5s ease;
 }
