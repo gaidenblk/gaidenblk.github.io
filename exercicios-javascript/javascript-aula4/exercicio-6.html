@@ -7,39 +7,44 @@
 		<link rel="stylesheet" href="./css/exercicio-6.css" />
 		<title>Exercício 6</title>
 	</head>
-	<body id="content">
-		<div id="explicacao">
-			<p>
-				O objetivo desse exercício é criar um sistema <br />
-				simples de cadastro de produtos em memória
-			</p>
-		</div>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<p>
+					O objetivo desse exercício é criar um sistema <br />
+					simples de cadastro de produtos em memória
+				</p>
+			</div>
 
-		<div id="exercicio">
-			<div>
-				Nome do Produto:
-				<input id="nomeProduto" type="text" placeholder="Digite aqui" />
+			<div id="exercicio">
+				<div>
+					Nome do Produto:
+					<input id="nomeProduto" type="text" placeholder="Digite aqui" />
+				</div>
+				<div>
+					Imagem Produto:
+					<input
+						id="imagemProduto"
+						type="text"
+						placeholder="Insira uma URL de Imagem" />
+				</div>
+				<button id="cadastrarProduto">Cadastrar</button>
+				<div>--------------------------------------------------------</div>
+				<div>
+					Selecione Produto:
+					<select name="selecionaProduto" id="selecionaProduto">
+						<option>Selecione</option>
+					</select>
+				</div>
+				<button id="exibirProduto">Exibir</button>
+				<div id="produtoSelecionado"></div>
 			</div>
-			<div>
-				Imagem Produto:
-				<input id="imagemProduto" type="text" placeholder="Insira uma URL de Imagem" />
-			</div>
-			<button id="cadastrarProduto">Cadastrar</button>
-			<div>--------------------------------------------------------</div>
-			<div>
-				Selecione Produto:
-				<select name="selecionaProduto" id="selecionaProduto">
-					<option>Selecione</option>
-				</select>
-			</div>
-			<button id="exibirProduto">Exibir</button>
-			<div id="produtoSelecionado"></div>
-		</div>
-		<nav id="linkNav">
-			Voltar para a <a href="./index.html" class="link">Lista</a><br />
-			Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
-		</nav>
-		<script src="./js/exercicio-6.js"></script>
-		<script src="/main.js"></script>
+			<nav id="linkNav">
+				Voltar para a <a href="./index.html" class="link">Lista</a><br />
+				Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
 	</body>
+	<script src="./js/exercicio-6.js"></script>
+	<script src="/main.js"></script>
 </html>

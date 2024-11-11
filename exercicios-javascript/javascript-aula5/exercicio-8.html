@@ -7,32 +7,35 @@
 		<link rel="stylesheet" href="./css/exercicio-8.css" />
 		<title>Exercício 8</title>
 	</head>
-	<body id="content">
-		<div id="explicacao">
-			Desafio ! Lógica ainda mais difícil ! Ainda mais trabalhoso ! Refaça o exercício
-			anterior , mas agora a div pequena é movimentada clicando e arrastando com o mouse,
-			não mais com as setas do teclado. Ou seja, ao clicar e segurar, a div pequena fica
-			“ativa” (muda de cor) e passa a seguir a posição do mouse. Ao soltar o mouse, ela
-			fica “inativa” de novo, ou seja, volta à cor original e fica parada onde o mouse
-			soltou. Se, ao arrastar a div pequena, o mouse sair da borda da div externa, a div
-			pequena não deve continuar, ele deve ficar “bloqueada” na parede. Mas a div pequena
-			ainda está “ativa” enquanto o mouse estiver sendo segurado, ou seja, se você
-			continuar segurando o mouse e voltar a posicioná-lo dentro das bordas da div
-			externa, a div pequena imediatamente volta a acompanhar a posição do mouse.
-			Sugestão: quando “mousedown”, registre a posição do mouse. Quando “mousemove”,
-			calcule o deslocamento do mouse e aplique na div. Já quando o mouse sair para fora
-			do container, pense aí !
-		</div>
-		<div id="exercicio">
-			<div id="conteiner">
-				<div class="naoSelecionada caixinha"></div>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				Desafio ! Lógica ainda mais difícil ! Ainda mais trabalhoso ! Refaça o
+				exercício anterior , mas agora a div pequena é movimentada clicando e
+				arrastando com o mouse, não mais com as setas do teclado. Ou seja, ao clicar e
+				segurar, a div pequena fica “ativa” (muda de cor) e passa a seguir a posição do
+				mouse. Ao soltar o mouse, ela fica “inativa” de novo, ou seja, volta à cor
+				original e fica parada onde o mouse soltou. Se, ao arrastar a div pequena, o
+				mouse sair da borda da div externa, a div pequena não deve continuar, ele deve
+				ficar “bloqueada” na parede. Mas a div pequena ainda está “ativa” enquanto o
+				mouse estiver sendo segurado, ou seja, se você continuar segurando o mouse e
+				voltar a posicioná-lo dentro das bordas da div externa, a div pequena
+				imediatamente volta a acompanhar a posição do mouse. Sugestão: quando
+				“mousedown”, registre a posição do mouse. Quando “mousemove”, calcule o
+				deslocamento do mouse e aplique na div. Já quando o mouse sair para fora do
+				container, pense aí !
 			</div>
-		</div>
-		<nav id="linkNav">
-			Voltar para a <a href="./index.html" class="link">Lista</a><br />
-			Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
-		</nav>
-		<script src="./js/exercicio-8.js"></script>
-		<script src="/main.js"></script>
+			<div id="exercicio">
+				<div id="conteiner">
+					<div class="naoSelecionada caixinha"></div>
+				</div>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a href="./index.html" class="link">Lista</a><br />
+				Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
 	</body>
+	<script src="./js/exercicio-8.js"></script>
+	<script src="/main.js"></script>
 </html>

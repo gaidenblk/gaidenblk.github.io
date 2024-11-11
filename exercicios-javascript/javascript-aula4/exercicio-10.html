@@ -7,39 +7,42 @@
 		<link rel="stylesheet" href="./css/exercicio-10.css" />
 		<title>Exercício 10</title>
 	</head>
-	<body id="content">
-		<div id="explicacao">
-			<p>
-				O objetivo desse exercício é criar uma lista de tarefas onde cada tarefa
-				<br />
-				nomeada é adicionado ao bloco do dia da semana respectivo ao da data informada!
-			</p>
-		</div>
-		<div id="exercicio">
-			<div>
-				Tarefa:
-				<input type="text" id="tarefa" />
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<p>
+					O objetivo desse exercício é criar uma lista de tarefas onde cada tarefa
+					<br />
+					nomeada é adicionado ao bloco do dia da semana respectivo ao da data
+					informada!
+				</p>
 			</div>
-			<div>
-				Data:
-				<input type="date" name="" id="data" />
+			<div id="exercicio">
+				<div>
+					Tarefa:
+					<input type="text" id="tarefa" />
+				</div>
+				<div>
+					Data:
+					<input type="date" name="" id="data" />
+				</div>
+				<button id="adiciona">adicionar</button>
+				<div id="tabelaDias">
+					<div id="segunda" class="semana">Segunda</div>
+					<div id="terca" class="semana">Terça</div>
+					<div id="quarta" class="semana">Quarta</div>
+					<div id="quinta" class="semana">Quinta</div>
+					<div id="sexta" class="semana">Sexta</div>
+					<div id="sabado" class="semana">Sábado</div>
+					<div id="domingo" class="semana">Domingo</div>
+				</div>
 			</div>
-			<button id="adiciona">adicionar</button>
-			<div id="tabelaDias">
-				<div id="segunda" class="semana">Segunda</div>
-				<div id="terca" class="semana">Terça</div>
-				<div id="quarta" class="semana">Quarta</div>
-				<div id="quinta" class="semana">Quinta</div>
-				<div id="sexta" class="semana">Sexta</div>
-				<div id="sabado" class="semana">Sábado</div>
-				<div id="domingo" class="semana">Domingo</div>
-			</div>
-		</div>
-		<nav id="linkNav">
-			Voltar para a <a href="./index.html" class="link">Lista</a><br />
-			Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
-		</nav>
-		<script src="./js/exercicio-10.js"></script>
-		<script src="/main.js"></script>
+			<nav id="linkNav">
+				Voltar para a <a href="./index.html" class="link">Lista</a><br />
+				Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
 	</body>
+	<script src="./js/exercicio-10.js"></script>
+	<script src="/main.js"></script>
 </html>

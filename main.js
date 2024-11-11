@@ -38,7 +38,7 @@ function carregarConteudo(url) {
 			// Carrega o CSS primeiro e aguarda o carregamento
 			carregarCSS(doc);
 			// Atualiza o conteúdo da página
-			const novoConteudo = doc.querySelector("body").innerHTML;
+			const novoConteudo = doc.querySelector("#content").innerHTML;
 			document.querySelector("#content").innerHTML = novoConteudo;
 
 			// Atualiza o título da página, opcionalmente
@@ -91,43 +91,57 @@ function carregarCSS(doc) {
 	return Promise.all(promises); // Retorna uma promise que resolve quando todos os CSS estão carregados
 }
 
+let scriptsCarregados = []; // Lista de scripts atualmente carregados
+
 function carregarScript(url) {
 	return new Promise((resolve, reject) => {
-		// Verifica se o script já foi carregado na sessão
-		if (sessionStorage.getItem(url) && url.endsWith("/main.js")) {
-			console.log(`Script já carregado: ${url}`);
-			resolve(); // Resolve imediatamente se já foi carregado
-			return;
-		}
-
+		// Cria o novo script
 		const script = document.createElement("script");
 		script.src = url;
 		script.onload = () => {
-			// Armazena o script no sessionStorage
-			sessionStorage.setItem(url, "loaded");
-			resolve(); // Resolve quando o script é carregado
+			// Armazena a referência do novo script carregado
+			scriptsCarregados.push(script);
+			resolve();
 		};
 		script.onerror = () => reject(new Error(`Erro ao carregar o script: ${url}`));
-		document.body.appendChild(script); // Adiciona o script ao DOM
+		document.body.appendChild(script);
 	});
+}
+
+function removerScriptsAnteriores() {
+	// Remove todos os scripts, exceto o main.js
+	document.querySelectorAll("script").forEach((script) => {
+		if (script.src && script.src.includes("main.js")) {
+			// Ignora o main.js
+			return;
+		}
+		if (script.parentNode) {
+			script.parentNode.removeChild(script);
+		}
+	});
+	// Limpa a lista após a remoção
+	scriptsCarregados = [];
 }
 
 function executarScripts(doc) {
 	const scripts = doc.querySelectorAll("script");
 	const promises = [];
 
+	// Remove todos os scripts da página anterior antes de carregar novos
+	removerScriptsAnteriores();
+
 	scripts.forEach((script) => {
-		if (script.src) {
+		if (script.src && !script.src.includes("main.js")) {
+			// Ignora o main.js
 			promises.push(carregarScript(script.src));
-		} else {
-			// Se for inline, executa diretamente (cuidado com a duplicação)
+		} else if (!script.src) {
+			// Scripts inline são executados diretamente
 			const newScript = document.createElement("script");
 			newScript.innerHTML = script.innerHTML;
 			document.body.appendChild(newScript);
 		}
 	});
 
-	// Retorna uma promessa que resolve quando todos os scripts externos são carregados
 	return Promise.all(promises);
 }
 
@@ -139,7 +153,7 @@ function animaPaginaCss() {
 			(document.querySelector("#content").style.animation = "moverEAparecer 1s ease"),
 			(document.querySelector("#content").style.display = "block")
 		),
-		100
+		350
 	);
 }
 

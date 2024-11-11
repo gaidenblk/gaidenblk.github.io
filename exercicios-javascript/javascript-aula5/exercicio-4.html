@@ -7,40 +7,43 @@
 		<link rel="stylesheet" href="./css/exercicio-4.css" />
 		<title>Exercício 4</title>
 	</head>
-	<body id="content">
-		<div id="explicacao">
-			<p>
-				Fa&ccedil;a uma p&aacute;gina que tem um &lt;input type=&quot;text&quot;&gt;
-				para digitar um n&uacute;mero de telefone, e um bot&atilde;o escrito
-				&ldquo;Cadastrar&rdquo;. Inicialmente, o bot&atilde;o deve estar desabilitado
-				(propriedade disabled). Os formatos aceitos de telefone s&atilde;o &ldquo;(XX)
-				XXXX-XXXX&rdquo; ou &ldquo;(XX) XXXXX-XXXX&rdquo;. Obs: n&atilde;o importam
-				espa&ccedil;os em branco no in&iacute;cio ou no fim, use trim(). Enquanto o
-				usu&aacute;rio digita no input, enquanto o input estiver inv&aacute;lido (vazio
-				ou fora do formato), deve aparecer embaixo do input uma mensagem em vermelho
-				com fonte pequena &ldquo;Telefone inv&aacute;lido&rdquo; (sugest&atilde;o: use
-				classe CSS para mostrar ou ocultar), e a borda do input deve estar vermelha.
-				Quando o input ficar correto, os dois sinalizadores de erro desaparecem, e o
-				bot&atilde;o fica habilitado. Se o usu&aacute;rio voltar a digitar no input e
-				ele ficar inv&aacute;lido de novo, voltam a aparecer os dois sinalizadores de
-				erro e o bot&atilde;o &eacute; desabilitado novamente. Essa
-				detec&ccedil;&atilde;o e sinaliza&ccedil;&atilde;o deve ser feita em
-				&ldquo;tempo real&rdquo; para cada tecla digitada no input. (ps: o bot&atilde;o
-				n&atilde;o precisa fazer nada, &eacute; s&oacute; para ilustrar que &eacute;
-				poss&iacute;vel desativar um bot&atilde;o enquanto o formul&aacute;rio
-				n&atilde;o est&aacute; preenchido corretamente)
-			</p>
-		</div>
-		<div id="exercicio">
-			<input id="inputTelefone" type="text" />
-			<button id="btnTelefone">validar</button>
-			<p id="textoValidador"></p>
-		</div>
-		<nav id="linkNav">
-			Voltar para a <a href="./index.html" class="link">Lista</a><br />
-			Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
-		</nav>
-		<script src="./js/exercicio-4.js"></script>
-		<script src="/main.js"></script>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<p>
+					Fa&ccedil;a uma p&aacute;gina que tem um &lt;input
+					type=&quot;text&quot;&gt; para digitar um n&uacute;mero de telefone, e um
+					bot&atilde;o escrito &ldquo;Cadastrar&rdquo;. Inicialmente, o bot&atilde;o
+					deve estar desabilitado (propriedade disabled). Os formatos aceitos de
+					telefone s&atilde;o &ldquo;(XX) XXXX-XXXX&rdquo; ou &ldquo;(XX)
+					XXXXX-XXXX&rdquo;. Obs: n&atilde;o importam espa&ccedil;os em branco no
+					in&iacute;cio ou no fim, use trim(). Enquanto o usu&aacute;rio digita no
+					input, enquanto o input estiver inv&aacute;lido (vazio ou fora do formato),
+					deve aparecer embaixo do input uma mensagem em vermelho com fonte pequena
+					&ldquo;Telefone inv&aacute;lido&rdquo; (sugest&atilde;o: use classe CSS
+					para mostrar ou ocultar), e a borda do input deve estar vermelha. Quando o
+					input ficar correto, os dois sinalizadores de erro desaparecem, e o
+					bot&atilde;o fica habilitado. Se o usu&aacute;rio voltar a digitar no input
+					e ele ficar inv&aacute;lido de novo, voltam a aparecer os dois
+					sinalizadores de erro e o bot&atilde;o &eacute; desabilitado novamente.
+					Essa detec&ccedil;&atilde;o e sinaliza&ccedil;&atilde;o deve ser feita em
+					&ldquo;tempo real&rdquo; para cada tecla digitada no input. (ps: o
+					bot&atilde;o n&atilde;o precisa fazer nada, &eacute; s&oacute; para
+					ilustrar que &eacute; poss&iacute;vel desativar um bot&atilde;o enquanto o
+					formul&aacute;rio n&atilde;o est&aacute; preenchido corretamente)
+				</p>
+			</div>
+			<div id="exercicio">
+				<input id="inputTelefone" type="text" />
+				<button id="btnTelefone">validar</button>
+				<p id="textoValidador"></p>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a href="./index.html" class="link">Lista</a><br />
+				Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
 	</body>
+	<script src="./js/exercicio-4.js"></script>
+	<script src="/main.js"></script>
 </html>
