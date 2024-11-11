@@ -9,10 +9,6 @@ code {
   color: #e4e69c;
 } */
 
-body {
-	transition: ease-in-out;
-}
-
 nav {
 	border: solid;
 	border-radius: 15px;
@@ -55,15 +51,16 @@ input {
 }
 
 /* Define a animação chamada 'moverLado' */
-/* @keyframes moverLado {
+@keyframes moverLado {
 	0% {
 		transform: translateX(110%);
 	}
 	100% {
 		transform: translateX(0%);
 	}
-} */
+}
 
+/* Define a animação chamada 'aparecer' */
 @keyframes aparecer {
 	0% {
 		opacity: 0%;
@@ -73,8 +70,14 @@ input {
 	}
 }
 
-/* Estilo da div e aplicação da animação */
-.anima {
-	/* animation: moverLado 1.5s ease-in; */
-	animation: aparecer 1.5s ease;
+/* Define a animação combinada chamada 'moverEAparecer' */
+@keyframes moverEAparecer {
+	0% {
+		transform: translateX(25%);
+		opacity: 0%;
+	}
+	100% {
+		transform: translateX(0%);
+		opacity: 100%;
+	}
 }

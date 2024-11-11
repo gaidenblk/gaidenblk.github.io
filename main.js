@@ -36,17 +36,16 @@ function carregarConteudo(url) {
 			const doc = parser.parseFromString(html, "text/html");
 
 			// Carrega o CSS primeiro e aguarda o carregamento
-			return carregarCSS(doc).then(() => {
-				// Atualiza o conteúdo da página
-				const novoConteudo = doc.querySelector("body").innerHTML;
-				document.querySelector("#content").innerHTML = novoConteudo;
+			carregarCSS(doc);
+			// Atualiza o conteúdo da página
+			const novoConteudo = doc.querySelector("body").innerHTML;
+			document.querySelector("#content").innerHTML = novoConteudo;
 
-				// Atualiza o título da página, opcionalmente
-				document.title = doc.title;
+			// Atualiza o título da página, opcionalmente
+			document.title = doc.title;
 
-				// Executar os scripts da nova página manualmente
-				executarScripts(doc);
-			});
+			// Executar os scripts da nova página manualmente
+			executarScripts(doc);
 		})
 		.catch((error) => console.error("Erro ao carregar o conteúdo:", error));
 }
@@ -133,18 +132,19 @@ function executarScripts(doc) {
 }
 
 function animaPaginaCss() {
-	// Remove a classe de animação brevemente
-	document.querySelector("#content").classList.remove("anima");
-
-	// Reinsere a classe de animação com um atraso
-	setTimeout(() => {
-		document.querySelector("#content").classList.add("anima");
-	}, 10); // Pequeno atraso para forçar a reativação da animação
+	document.querySelector("#content").style.animation = "none";
+	document.querySelector("#content").style.display = "none";
+	setTimeout(
+		() => (
+			(document.querySelector("#content").style.animation = "moverEAparecer 1s ease"),
+			(document.querySelector("#content").style.display = "block")
+		),
+		100
+	);
 }
 
 window.addEventListener("popstate", () => {
 	carregarConteudo(window.location.pathname); // Recarrega o conteúdo da URL
-
 	animaPaginaCss(); //Força a reexecução da animação no CSS
 });
 
