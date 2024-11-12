@@ -1,0 +1,62 @@
+#exercicio {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+
+textarea {
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+form {
+	margin-left: 15px;
+	display: flex;
+	flex-direction: column;
+}
+
+#fndCor,
+#fntCor {
+	cursor: pointer;
+	border-radius: 5px;
+	padding: 0;
+}
+
+#fntTamanho,
+#fntFamilia {
+	cursor: pointer;
+	border-radius: 5px;
+	outline: none;
+	width: 140px;
+}
+
+#modalImporta,
+#modalExporta {
+	display: none;
+	border: 2px solid;
+	position: absolute;
+	border-radius: 15px;
+	padding: 5px;
+	min-width: 240px;
+	width: fit-content;
+	height: fit-content;
+	top: 130px;
+	left: 430px;
+}
+
+.btnFecha {
+	cursor: pointer;
+	border-radius: 50%;
+	font-size: 8px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+input {
+	cursor: pointer;
+	margin: 5px;
+}
