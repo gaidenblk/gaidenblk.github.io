@@ -18,9 +18,6 @@ document.addEventListener("click", function (event) {
 			console.log("Estado diferente, atualizando pushState");
 			window.history.pushState({ url: url }, "", url);
 		}
-
-		//Força a reexecução da animação no CSS
-		animaPaginaCss();
 	}
 });
 
@@ -35,17 +32,27 @@ function carregarConteudo(url) {
 			const parser = new DOMParser();
 			const doc = parser.parseFromString(html, "text/html");
 
-			// Carrega o CSS primeiro e aguarda o carregamento
-			carregarCSS(doc);
-			// Atualiza o conteúdo da página
-			const novoConteudo = doc.querySelector("#content").innerHTML;
-			document.querySelector("#content").innerHTML = novoConteudo;
+			// Realiza procedimento de transição de telas com animação
+			document.querySelector("#content").style.animation = "sumir 0.5s ease";
+
+			// Complementa fim da animação
+			setTimeout(
+				() => (
+					// Carrega o CSS primeiro e aguarda o carregamento
+					carregarCSS(doc),
+					// Atualiza o conteúdo da página
+					(document.querySelector("#content").innerHTML =
+						doc.querySelector("#content").innerHTML),
+					// Executar os scripts da nova página manualmente
+					executarScripts(doc),
+					// Finaliza com a animação
+					(document.querySelector("#content").style.animation = "aparecer 1s ease")
+				),
+				350
+			);
 
 			// Atualiza o título da página, opcionalmente
 			document.title = doc.title;
-
-			// Executar os scripts da nova página manualmente
-			executarScripts(doc);
 		})
 		.catch((error) => console.error("Erro ao carregar o conteúdo:", error));
 }
@@ -145,21 +152,8 @@ function executarScripts(doc) {
 	return Promise.all(promises);
 }
 
-function animaPaginaCss() {
-	document.querySelector("#content").style.animation = "none";
-	document.querySelector("#content").style.display = "none";
-	setTimeout(
-		() => (
-			(document.querySelector("#content").style.animation = "moverEAparecer 1s ease"),
-			(document.querySelector("#content").style.display = "block")
-		),
-		350
-	);
-}
-
 window.addEventListener("popstate", () => {
 	carregarConteudo(window.location.pathname); // Recarrega o conteúdo da URL
-	animaPaginaCss(); //Força a reexecução da animação no CSS
 });
 
 // Define o estado inicial ao carregar a página

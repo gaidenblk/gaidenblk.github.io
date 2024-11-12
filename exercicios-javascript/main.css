@@ -60,18 +60,20 @@ input {
 	}
 }
 
-/* Define a animação chamada 'aparecer' */
-@keyframes aparecer {
+/* Define a animação chamada 'sumir' */
+@keyframes sumir {
 	0% {
-		opacity: 0%;
+		transform: translateX(0%);
+		opacity: 100%;
 	}
 	100% {
-		opacity: 100%;
+		transform: translateX(25%);
+		opacity: 0%;
 	}
 }
 
-/* Define a animação combinada chamada 'moverEAparecer' */
-@keyframes moverEAparecer {
+/* Define a animação combinada chamada 'aparecer' */
+@keyframes aparecer {
 	0% {
 		transform: translateX(25%);
 		opacity: 0%;
