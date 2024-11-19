@@ -1,0 +1,12 @@
+#exercicio {
+	display: flex;
+	flex-direction: column;
+}
+
+textarea {
+	outline: none;
+	border-radius: 10px;
+	padding: 5px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}

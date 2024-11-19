@@ -1,0 +1,28 @@
+span {
+	cursor: pointer;
+}
+
+#produtoContainer > p {
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+#produtoContainer {
+	display: none;
+	flex-direction: column;
+	top: 20px;
+	left: 400px;
+	padding: 5px;
+	border-radius: 10px;
+	border: 2px solid;
+}
+
+#editProdutoContainer {
+	display: none;
+	flex-direction: column;
+	top: 200px;
+	left: 400px;
+	padding: 5px;
+	border-radius: 10px;
+	border: 2px solid;
+}
