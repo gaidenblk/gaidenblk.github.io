@@ -1,0 +1,44 @@
+span {
+	cursor: pointer;
+}
+
+#cadastroContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+#tableContainer {
+	padding: 5px;
+	border-radius: 10px;
+	border: 1px solid;
+}
+
+#produtoContainer {
+	display: none;
+	flex-direction: column;
+	padding: 5px;
+	border-radius: 10px;
+	border: 1px solid;
+}
+
+#produtoContainer > p {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+#btnBuscar {
+	position: absolute;
+	left: 137px;
+}
+
+#editProdutoContainer {
+	width: 180px;
+	display: none;
+	flex-direction: column;
+	padding-left: 2px;
+	border-radius: 10px;
+	border: 1px solid;
+}

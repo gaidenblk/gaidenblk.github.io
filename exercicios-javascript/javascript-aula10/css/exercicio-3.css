@@ -1,0 +1,23 @@
+.hidden {
+	display: none;
+}
+
+#filter {
+	display: flex;
+	flex-direction: column;
+	border: solid 1px;
+	border-radius: 5px;
+	padding: 2px;
+}
+
+#sort {
+	border: solid 1px;
+	border-radius: 5px;
+	padding: 2px;
+}
+
+#movies {
+	border: solid 1px;
+	border-radius: 5px;
+	padding: 2px;
+}

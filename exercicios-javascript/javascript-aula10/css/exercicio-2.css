@@ -1,0 +1,21 @@
+#container {
+	display: none;
+}
+
+#container > p {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+#exercicio {
+	display: flex;
+	flex-direction: column;
+}
+
+#btnBuscar {
+	position: absolute;
+	left: 140px;
+}

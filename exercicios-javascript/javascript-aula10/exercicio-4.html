@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/exercicios-javascript/main.css" />
+		<link rel="stylesheet" href="./css/exercicio-4.css" />
+		<title>Exercicio 4</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<p>
+					Somir, o diretor de um parquinho de divers&otilde;es, recebeu uma lista de
+					eventos programados para a pr&oacute;xima semana.
+				</p>
+				<p>
+					Esta lista foi exportada de um sistema de gerenciamento antigo e
+					est&aacute; bastante desorganizada. Somir precisa de sua ajuda para
+					formatar essa lista corretamente, para que possa ser facilmente lida e
+					utilizada.
+				</p>
+				<p>
+					A lista de eventos &eacute; fornecida em um formato de texto bruto, onde
+					cada linha representa um evento. Cada evento est&aacute; descrito com o
+					nome do evento, seguido da data e hora, mas tudo est&aacute; em uma
+					&uacute;nica linha e separado por v&iacute;rgulas.
+				</p>
+				<p>
+					Al&eacute;m disso, algumas linhas est&atilde;o vazias e devem ser
+					ignoradas. Exemplo (as datas est&atilde;o no formato ano-m&ecirc;s-dia):
+				</p>
+				<pre>
+Show de M&aacute;gica,2024-02-01,20:00
+Parada de Fantasias,2024-02-02,16:00
+Concerto de Rock,2024-02-03,21:00
+Noite de Fogos de Artif&iacute;cio,2024-02-05,22:00
+</pre
+				>
+				<p>
+					Voc&ecirc; deve fazer uma p&aacute;gina web com um &lt;textarea&gt; para o
+					Somir colar a lista que ele tem no formato bruto, e um bot&atilde;o
+					&ldquo;Formatar&rdquo; que vai mostrar numa &lt;table&gt; a mesma lista
+					(cada evento ser&aacute; uma linha da tabela), mas formatada de acordo com
+					as seguintes regras:
+				</p>
+				<ul>
+					<li> Remover linhas vazias.</li>
+					<li>Ordenar os eventos do mais recente para o mais antigo.</li>
+					<li
+						>Para cada evento segundo essas regras de formata&ccedil;&atilde;o, as
+						colunas da tabela dever&atilde;o ser:
+						<ul>
+							<li>
+								nome do evento, data do evento no formato (dia-m&ecirc;s-ano)
+							</li>
+							<li>
+								dia da semana correspondente ao evento (por extenso:
+								&ldquo;segunda-feira&rdquo;, ou
+								&ldquo;ter&ccedil;a-feira&rdquo;, etc.)
+							</li>
+							<li>
+								hor&aacute;rio (&ldquo;21:30&rdquo;, &ldquo;09:45&rdquo;, etc.)
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<p>
+					Na lista do Somir, os hor&aacute;rios est&atilde;o no fuso-hor&aacute;rio
+					local, e voc&ecirc; exibir os dados na tabela tamb&eacute;m no fuso
+					hor&aacute;rio local.
+				</p>
+			</div>
+			<div id="exercicio">
+				<div>
+					Cole os Dados Aqui:
+					<textarea name="" id="txtDados" cols="30" rows="10"></textarea>
+					<button id="btnFormatar">Formatar</button>
+				</div>
+				<table id="tableContainer">
+					<tr>
+						<th>Nome do Evento</th>
+						<th>Data</th>
+						<th>Dia da Semana</th>
+						<th>Horário</th>
+					</tr>
+				</table>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a href="./index.html" class="link">Lista</a><br />
+				Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+	</body>
+	<script src="./js/exercicio-4.js"></script>
+	<script src="/main.js"></script>
+</html>

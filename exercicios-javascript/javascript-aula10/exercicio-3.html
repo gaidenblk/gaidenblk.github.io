@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/exercicios-javascript/main.css" />
+		<link rel="stylesheet" href="./css/exercicio-3.css" />
+		<title>Exercicio 3</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<p>
+					Partindo da solução final da aplicação de Lista de Filmes resolvida no
+					material desta aula, vamos adicionar mais uma funcionalidade a ela:
+				</p>
+				<p>
+					Agora a tabela de filmes deve exibir também o orçamento do filme
+					(propriedade “budget”). Note que alguns filmes estão com budget faltando,
+					eles devem ser jogados fora no momento da importação.
+				</p>
+				<p>
+					A funcionalidade de filtro deve permitir filtrar por orçamento (mínimo e
+					máximo).
+				</p>
+				<p>
+					Se o usuário deixar vazio o campo de mínimo, significa que não há um mínimo
+					desejado (analogamente para o campo de máximo).
+				</p>
+				<p>
+					E a funcionalidade de ordenação deve permitir ordenar por orçamento
+					(crescente ou decrescente).
+				</p>
+				<p>
+					Encontramos no site Kaggle uma base de dados sobre filmes, contendo
+					informação sobre ~5000 filmes (título, gêneros, ano, orçamento, etc.):
+					<a
+						href="https://www.kaggle.com/datasets/carolzhangdc/imdb-5000-movie-dataset"
+						>https://www.kaggle.com/datasets/carolzhangdc/imdb-5000-movie-dataset</a
+					>
+				</p>
+			</div>
+			<div id="exercicio">
+				<!-- 1: exibido quando a página inicia -->
+				<button id="import-button">Importar</button>
+				<!-- 2: escondido, só é exibido após a importação dos dados acima -->
+				<div id="presentation-container" class="hidden">
+					<div id="filter">
+						<!-- 3: controles de filtro -->
+						<strong>Filtros</strong>
+						<div>
+							Duração: de <input id="min-duration" /> até
+							<input id="max-duration" />
+						</div>
+						<div>
+							Pontuação IMDB: de <input id="min-score" /> até
+							<input id="max-score" />
+						</div>
+						<div>
+							Orçamento: de <input id="min-budget" /> até
+							<input id="max-budget" />
+						</div>
+					</div>
+					<div id="sort">
+						<!-- 4: controles de ordenação -->
+						<strong>Ordenação</strong>
+						<select id="sort-property">
+							<option>Título</option>
+							<option>Ano</option>
+							<option>Orçamento</option>
+							<option>Pontuação</option>
+							<option>Duração</option>
+						</select>
+						<select id="sort-order">
+							<option>Crescente</option>
+							<option>Decrescente</option>
+						</select>
+						<button id="apply-button">Aplicar</button>
+					</div>
+					<div id="movies">
+						<!-- 5: tabela de filmes -->
+						<strong>Filmes</strong>
+						<table>
+							<thead>
+								<tr>
+									<th>Título</th>
+									<th>Ano</th>
+									<th>Pontuação</th>
+									<th>Duração</th>
+									<th>Orçamento</th>
+								</tr>
+							</thead>
+							<tbody id="table-body"></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a href="./index.html" class="link">Lista</a><br />
+				Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+	</body>
+	<script src="./js/exercicio-3.js"></script>
+	<script src="/main.js"></script>
+</html>
