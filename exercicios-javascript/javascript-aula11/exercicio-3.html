@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/exercicios-javascript/main.css" />
+		<title> Exercício 3</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<p>
+					Numa certa p&aacute;gina web, h&aacute; um formul&aacute;rio para
+					preenchimento de nome e telefone.
+				</p>
+				<p>
+					O nome &eacute; requerido (n&atilde;o pode ser vazio, ap&oacute;s trim()),
+					e deve ter tamanho pelo menos 3 caracteres.
+				</p>
+				<p>
+					O telefone deve estar no formato &ldquo;(XX) XXXX-XXXX&rdquo; ou
+					&ldquo;(XX) XXXXX-XXXX&rdquo;.
+				</p>
+				<p>
+					A p&aacute;gina tem um bot&atilde;o &ldquo;Cadastrar&rdquo; que, ao ser
+					clicado, verifica se os inputs est&atilde;o corretos e, se estiverem, exibe
+					no HTML a mensagem &ldquo;Cadastro bem sucedido&rdquo;.
+				</p>
+				<p>
+					Caso haja problemas nos inputs, a p&aacute;gina exibe no HTML uma mensagem
+					de erro &ldquo;Dados inv&aacute;lidos&rdquo;. O c&oacute;digo de ouvinte de
+					evento do bot&atilde;o &eacute; como segue:
+				</p>
+				<pre>
+document.querySelector(&quot;button&quot;).addEventListener(&quot;click&quot;, function () {
+	// name-input e telephone-input s&atilde;o
+	// &lt;input type=&quot;text&quot;&gt; presentes no HTML
+	const name = document.getElementById(&quot;name-input&quot;).value;
+	const phone = document.getElementById(&quot;telephone-input&quot;).value;
+	if (!nameIsValid(name) || !phoneIsValid(phone)) {
+		showError();
+	} else {
+		showSuccess();
+	}
+});
+</pre
+				>
+				<p>
+					Est&aacute; faltando nesse c&oacute;digo a implementa&ccedil;&atilde;o das
+					fun&ccedil;&otilde;es nameIsValid, phoneIsValid, showError e showSucess.
+				</p>
+				<p>
+					Implemente essas fun&ccedil;&otilde;es como fica subentendido no
+					c&oacute;digo dado, para que o site funcione integralmente (escreva o
+					HTML).
+				</p>
+			</div>
+			<div id="exercicio">
+				<input type="text" id="name-input" />
+				<input type="text" id="telephone-input" />
+				<button>Verificar</button>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a href="./index.html" class="link">Lista</a><br />
+				Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+	</body>
+	<script src="./js/exercicio-3.js"></script>
+	<script src="/main.js"></script>
+</html>

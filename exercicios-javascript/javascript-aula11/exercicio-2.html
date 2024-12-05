@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/exercicios-javascript/main.css" />
+		<title> Exercício 2</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<p>
+					Implemente uma fun&ccedil;&atilde;o chamada range que funciona da seguinte
+					forma:
+				</p>
+				<p>
+					&bull; Se invocada como range(《n&uacute;mero》), por exemplo range(4), ela
+					retorna um array que vai de 0 at&eacute; o n&uacute;mero solicitado
+					(exclusivo). Por exemplo range(4) &rArr; [0, 1, 2, 3] Se o n&uacute;mero
+					for menor ou igual a zero, ela retorna [].
+				</p>
+				<p>
+					&bull; Se invocada como range(《n&uacute;mero》, 《n&uacute;mero》), ela
+					trata o primeiro n&uacute;mero como in&iacute;cio do intervalo (inclusivo)
+					e o segundo n&uacute;mero como fim do intervalo (exclusivo). Por exemplo
+					range(3, 7) &rArr; [3, 4, 5, 6] Se o segundo n&uacute;mero for menor ou
+					igual ao primeiro, ela retorna [].
+				</p>
+				<p>
+					Voc&ecirc; pode assumir que quem invoca a fun&ccedil;&atilde;o
+					passar&aacute; sempre n&uacute;meros inteiros como valores dos
+					par&acirc;metros.
+				</p>
+				<p>
+					Sugest&atilde;o: pense separadamente como voc&ecirc; faria se fosse somente
+					range(《n&uacute;mero》), e se fosse somente range(《n&uacute;mero》,
+					《n&uacute;mero》 ), depois pense como voc&ecirc; pode detectar qual dos
+					dois casos realmente &eacute;.
+				</p>
+			</div>
+			<div id="exercicio">
+				<input id="inpt1" type="number" />
+				<input id="inpt2" type="number" />
+				<button id="btnVerificar">verificar</button>
+				<p id="container"></p>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a href="./index.html" class="link">Lista</a><br />
+				Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+	</body>
+	<script src="./js/exercicio-2.js"></script>
+	<script src="/main.js"></script>
+</html>
