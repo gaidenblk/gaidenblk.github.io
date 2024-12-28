@@ -1,9 +1,24 @@
 document.addEventListener("click", function (event) {
-	const target = event.target;
+	// Verifica se o elemento clicado é um link (A) válido
+	const target = event.target.closest("a"); // Procura o elemento mais próximo que seja <a>
 
+	if (!target) {
+		// Se não é um link, sai da função
+		return;
+	}
+
+	// Obtém o URL do atributo href
+	const url = target.getAttribute("href");
+
+	// Se o link é uma âncora (começa com # ou contém o atual location.pathname)
+	if (url.startsWith("#") || (url.startsWith(location.pathname) && url.includes("#"))) {
+		console.log("Âncora clicada:", url);
+		return; // Deixa o navegador executar o comportamento padrão
+	}
+
+	// Se o link tem a classe "link", processa normalmente
 	if (target.tagName === "A" && target.classList.contains("link")) {
 		event.preventDefault(); // Impede a navegação padrão
-		const url = target.getAttribute("href"); // Obtém o URL do link
 		console.log("URL clicada:", url);
 
 		let actualState = window.history.state;
@@ -100,11 +115,12 @@ function carregarCSS(doc) {
 
 let scriptsCarregados = []; // Lista de scripts atualmente carregados
 
-function carregarScript(url) {
+function carregarScript(url, type) {
 	return new Promise((resolve, reject) => {
 		// Cria o novo script
 		const script = document.createElement("script");
 		script.src = url;
+		script.type = type;
 		script.onload = () => {
 			// Armazena a referência do novo script carregado
 			scriptsCarregados.push(script);
@@ -139,9 +155,16 @@ function executarScripts(doc) {
 
 	scripts.forEach((script) => {
 		if (script.src && !script.src.includes("main.js")) {
-			// Ignora o main.js
-			promises.push(carregarScript(script.src));
-		} else if (!script.src) {
+			if (script.type === "module") {
+				// Carregar o módulo dinamicamente
+				const moduleUrl = script.src + "?t=" + new Date().getTime(); // Adiciona cache buster
+				promises.push(import(moduleUrl));
+			} else {
+				promises.push(carregarScript(script.src, script.type));
+			}
+		}
+
+		if (!script.src) {
 			// Scripts inline são executados diretamente
 			const newScript = document.createElement("script");
 			newScript.innerHTML = script.innerHTML;
@@ -153,6 +176,9 @@ function executarScripts(doc) {
 }
 
 window.addEventListener("popstate", () => {
+	if (window.location.hash.includes("#")) {
+		return;
+	}
 	carregarConteudo(window.location.pathname); // Recarrega o conteúdo da URL
 });
 
