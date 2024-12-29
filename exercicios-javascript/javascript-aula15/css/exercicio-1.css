@@ -1,0 +1,29 @@
+#containerMapa {
+	border-radius: 15px;
+	display: none;
+	position: absolute;
+	top: 15%;
+	left: 50%;
+}
+
+#mapa {
+	border-radius: 15px;
+}
+
+#btnMapa {
+	z-index: 2;
+	top: 30px;
+	left: 274px;
+	display: none;
+	position: absolute;
+}
+
+#fecharMapa {
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
