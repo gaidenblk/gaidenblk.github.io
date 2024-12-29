@@ -1,0 +1,11 @@
+#container:hover {
+	cursor: pointer;
+}
+
+#intContainer {
+	display: flex;
+}
+
+img {
+	border-radius: 10px;
+}
