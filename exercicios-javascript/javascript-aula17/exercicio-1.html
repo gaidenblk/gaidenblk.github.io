@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/exercicios-javascript/main.css">
+		<link rel="stylesheet" href="./css/exercicio-1.css">
+		<title>Exercício 1</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<p>
+					Crie uma p&aacute;gina web que simule um sorteio, considerando os
+					seguintes pontos:
+				</p>
+				<ul>
+					<li>
+						utilizando o conceito de closures, crie uma fun&ccedil;&atilde;o que
+						instancie cartelas para o sorteio, cada uma com 10 n&uacute;meros, seleccionados de 1 a 75
+						a cartela deve conter closures que realizem as seguintes a&ccedil;&otilde;es:
+					</li>
+					<ul>
+						<li>
+							listar os n&uacute;meros da cartela
+						</li>
+						<li>
+							marcar um n&uacute;mero como sorteado
+						</li>
+						<li>
+							verificar se todos os n&uacute;meros da cartela foram marcados
+						</li>
+					</ul>
+					<li>
+						da mesma forma, crie uma fun&ccedil;&atilde;o que instancie um
+						&ldquo;sorteador&rdquo; (tal como um globo de bingo), respons&aacute;vel por
+						armazenar e sortear os n&uacute;meros do sorteio, considerando
+						que:
+						<ul>
+							<li>
+								a fun&ccedil;&atilde;o do sorteador dever&aacute; receber dois
+								par&acirc;metros, max e min, a serem utilizados para
+								construir um array de n&uacute;meros que podem ser
+								sorteados pelo sorteador
+							</li>
+						</ul>
+					<li>
+						o sorteador deve conter closures que realizem as seguintes
+						a&ccedil;&otilde;es:
+						<ul>
+							<li>
+								sortear um n&uacute;mero que ainda n&atilde;o foi sorteado
+							</li>
+							<li>
+								verificar se um n&uacute;mero j&aacute; foi sorteado
+							</li>
+						</ul>
+					</li>
+					<li>
+						a p&aacute;gina deve mostrar, al&eacute;m de um sorteador, duas ou mais
+						cartelas de sorteio, ambos instanciados com as fun&ccedil;&otilde;es
+						criadas nos itens anteriores
+					</li>
+					<li>
+						um bot&atilde;o &ldquo;INICIAR&rdquo; deve ser utilizado para iniciar o sorteio,
+						sendo que, ap&oacute;s o in&iacute;cio, um n&uacute;mero seja sorteado a cada 5
+						segundos, at&eacute; que n&atilde;o sobrem mais n&uacute;meros no sorteador
+					</li>
+					<li>
+						os n&uacute;meros das cartelas devem ser clic&aacute;veis, sendo
+						marcados caso o n&uacute;mero j&aacute; tenha sido sorteado
+					</li>
+					<li>
+						quando uma cartela tiver sido totalmente marcada, uma
+						mensagem deve indicar o ganhador do sorteio, e o sorteio de
+						novos n&uacute;meros deve ser interrompido.
+					</li>
+				</ul>
+			</div>
+			<div id="exercicio">
+				<h1>Bingo!</h1>
+				<div>
+					<button id="btnInicia">Iniciar Sorteio</button>
+				</div>
+				<div>
+					Números Sorteados:</br>
+					<div id="containerSorteio"></div>
+				</div>
+				<div>
+					Adicionar nova Cartela:</br>
+					<button id="btnNovaCartela">Nova Cartela</button>
+				</div>
+				<div>
+					Cartelas:</br>
+					<div id="containerCartela"></div>
+				</div>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a href="./index.html" class="link">Lista</a><br />
+				Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+	</body>
+	<script src="./js/exercicio-1.js"></script>
+	<script src="/main.js"></script>
+</html>

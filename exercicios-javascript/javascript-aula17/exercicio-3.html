@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/exercicios-javascript/main.css" />
+		<title> Exercício 3</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<p>
+					Utilizando a classe Avatar criada na questão 2, crie as seguintes
+					subclasses:
+				</p>
+				<ul>
+					<li>
+						Cowboy: que herdará todos os atributos e métodos de
+						Avatar, e conterá os seguintes atributos e métodos:
+						<ul>
+							<li>
+								um atributo que represente a munição disponível
+								com o Cowboy, com valor inicial igual a 10
+							</li>
+							<li>
+								um atributo que represente pontos de dano, com
+								valor inicial igual a 2
+							</li>
+							<li>
+								um método chamado attack, que represente a ação
+								de atirar, sendo que ao atirar, a munição seja
+								decrementada, e o valor de dano seja retornado
+							</li>
+							<li>
+								um método que adicione munição ao Cowboy,
+								simulando que o mesmo encontrou munição na sua
+								movimentação pelo jogo
+							</li>
+						</ul>
+					</li>
+					<li>
+						Mago: que herdará todos os atributos e métodos de Avatar,
+						e conterá os seguintes atributos e métodos:
+						<ul>
+							<li>
+								um atributo que indique a quantidade de feitiços que
+								o mesmo tem para lançar, com valor inicial igual a 10
+							</li>
+							<li>
+								um atributo que represente pontos de dano, com
+								valor inicial igual a 3
+							</li>
+							<li>
+								um método chamado attack, que represente a ação
+								de atacar com um feitiço, sendo que ao atacar, a
+								quantidade de feitiços seja decrementada, e o valor
+								de dano seja retornado
+							</li>
+							<li>
+								quando os feitiços se esgotarem, depois de 10
+								segundos, devem ser restaurados com a quantidade
+								inicial
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<p>
+					Para acessar esse exercício utilize o console do navegador, já temos players instanciados, basta digitar
+					player2 seguido de . e selecionar seus atributos, aqui temos também o playerCowboy e playerMage já
+					instanciados
+				</p>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a href="./index.html" class="link">Lista</a><br />
+				Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+	</body>
+	<script src="./js/exercicio-3.js"></script>
+	<script src="/main.js"></script>
+</html>

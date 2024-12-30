@@ -1,0 +1,50 @@
+#containerSorteio {
+	border: solid red 2px;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.nmroSorteado {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid salmon;
+	font-weight: 600;
+	border-radius: 50%;
+	margin: 10px;
+	padding: 10px;
+	width: 20px;
+}
+
+#containerCartela {
+	display: flex;
+	flex-wrap: wrap;
+}
+.cartela {
+	padding: 5px;
+	align-items: center;
+	word-break: break-all;
+	display: flex;
+	justify-content: space-around;
+	align-content: space-around;
+	border-radius: 5px;
+	border: 2px solid blueviolet;
+	margin: 10px;
+	flex-wrap: wrap;
+	width: 150px;
+	height: 100px;
+}
+span {
+	cursor: pointer;
+	font-weight: 600;
+	display: flex;
+	border: 2px solid sienna;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	justify-content: center;
+	align-items: center;
+	background-color: aqua;
+}
