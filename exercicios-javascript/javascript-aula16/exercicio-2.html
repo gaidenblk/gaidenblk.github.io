@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/exercicios-javascript/main.css" />
+		<link rel="stylesheet" href="./css/exercicio-2.css">
+		<title>Exercicio 2</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<p>
+					Utilize a API deck de cartas (https://deckofcardsapi.com/) para criar
+					uma fun&ccedil;&atilde;o, utilizando async/await, que:
+				</p>
+				<ul>
+					<li>
+						embaralhe um deck e logo em seguida fa&ccedil;a 5 consultas,
+						buscando 1 carta no mesmo deck a cada consulta, de forma
+						sequencial
+					</li>
+					<li>
+						caso o retorno de qualquer consulta n&atilde;o contenha status
+						200, isto &eacute;, os dados n&atilde;o forem devidamente recebidos, a
+						sua fun&ccedil;&atilde;o dever&aacute; rejeitar (reject) o retorno
+					</li>
+				</ul>
+			</div>
+			<div id="exercicio">
+				<div id="divCartas"></div>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a href="./index.html" class="link">Lista</a><br />
+				Voltar para o <a href="/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+	</body>
+	<script src="./js/exercicio-2.js"></script>
+	<script src="/main.js"></script>
+</html>
