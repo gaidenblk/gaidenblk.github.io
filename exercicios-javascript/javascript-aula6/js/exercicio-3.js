@@ -1,9 +1,9 @@
 (function () {
 	// IIFE adicionado para evitar redeclaração de variavel na SPA
 
-	const ul = document.querySelector("ul");
+	const ul = document.querySelector("#ulContent");
 
-	document.querySelector("button").addEventListener("click", function () {
+	document.querySelector("#btnBotao").addEventListener("click", function () {
 		let count = 0;
 
 		const li = document.createElement("li");

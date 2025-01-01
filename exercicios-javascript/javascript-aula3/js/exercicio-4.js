@@ -8,6 +8,10 @@
 	const classificacao = document.querySelector("#classificacao");
 
 	function calcImc() {
+		if (!peso.value || !altura.value) {
+			alert("Os Inputs não devem estar vazios!");
+			return;
+		}
 		const valorPeso = Number(peso.value);
 		const valorAltura = parseFloat(altura.value / 100);
 		const valorImc = valorPeso / (valorAltura * valorAltura);

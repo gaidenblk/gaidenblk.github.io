@@ -1,7 +1,7 @@
 (function () {
 	// IIFE adicionado para evitar redeclaração de variavel na SPA
 
-	document.querySelector("button").addEventListener("click", function () {
+	document.querySelector("#btnVerificar").addEventListener("click", function () {
 		const name = document.getElementById("name-input").value;
 		const phone = document.getElementById("telephone-input").value;
 

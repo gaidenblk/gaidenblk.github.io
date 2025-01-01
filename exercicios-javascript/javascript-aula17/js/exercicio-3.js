@@ -200,9 +200,7 @@ class Mage extends Personagem {
 	}
 }
 
-const player2 = new Personagem(11, 11);
 const playerCowboy = new Cowboy(10, 10);
 const playerMage = new Mage(10, 10);
-console.log(player2);
 console.log(playerCowboy);
 console.log(playerMage);
