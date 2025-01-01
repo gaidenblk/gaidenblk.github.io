@@ -1,7 +1,6 @@
 document.addEventListener("click", function (event) {
 	// Verifica se o elemento clicado é um link (A) válido
 	const target = event.target.closest("a"); // Procura o elemento mais próximo que seja <a>
-
 	if (!target) {
 		// Se não é um link, sai da função
 		return;
@@ -11,26 +10,24 @@ document.addEventListener("click", function (event) {
 	const url = target.getAttribute("href");
 
 	// Se o link é uma âncora (começa com # ou contém o atual location.pathname)
+	if (!url) return;
 	if (url.startsWith("#") || (url.startsWith(location.pathname) && url.includes("#"))) {
-		console.log("Âncora clicada:", url);
 		return; // Deixa o navegador executar o comportamento padrão
 	}
 
 	// Se o link tem a classe "link", processa normalmente
 	if (target.tagName === "A" && target.classList.contains("link")) {
 		event.preventDefault(); // Impede a navegação padrão
-		console.log("URL clicada:", url);
 
 		let actualState = window.history.state;
-		console.log("Estado atual:", actualState);
 
 		// Verificar se o estado atual existe e se a URL é diferente
 		if (!actualState || actualState.url !== url) {
 			// Carregar conteúdo via AJAX
+			carregarNavbar(url);
 			carregarConteudo(url);
 
 			// Atualizar o histórico do navegador
-			console.log("Estado diferente, atualizando pushState");
 			window.history.pushState({ url: url }, "", url);
 		}
 	}
@@ -48,7 +45,7 @@ function carregarConteudo(url) {
 			const doc = parser.parseFromString(html, "text/html");
 
 			// Realiza procedimento de transição de telas com animação
-			document.querySelector("#content").style.animation = "sumir 0.5s ease";
+			document.querySelector("#content").style.animation = "sumirDireita 0.5s ease";
 
 			// Complementa fim da animação
 			setTimeout(
@@ -61,9 +58,9 @@ function carregarConteudo(url) {
 					// Executar os scripts da nova página manualmente
 					executarScripts(doc),
 					// Finaliza com a animação
-					(document.querySelector("#content").style.animation = "aparecer 1s ease")
+					(document.querySelector("#content").style.animation = "aparecerEsquerda 1s ease")
 				),
-				350
+				350,
 			);
 
 			// Atualiza o título da página, opcionalmente
@@ -71,6 +68,64 @@ function carregarConteudo(url) {
 		})
 		.catch((error) => console.error("Erro ao carregar o conteúdo:", error));
 }
+
+function carregarNavbar(url) {
+	const sideNavbar = document.querySelector("#sideNavbar") || null;
+	const sideNavBtn = document.querySelector("#sideNavBtn") || null;
+	if (!url.includes("exercicio")) {
+		if (sideNavBtn) {
+			if (sideNavbar) sideNavbar.style.animation = "sumirEsquerda 0.5s ease";
+			if (sideNavBtn) sideNavBtn.style.animation = "sumirEsquerda 0.5s ease";
+			setTimeout(() => {
+				if (sideNavbar) sideNavbar.remove();
+				if (sideNavBtn) sideNavBtn.remove();
+				document.querySelector("#content").style.marginLeft = "10px";
+			}, 350);
+		}
+		return;
+	}
+
+	if (sideNavBtn) return;
+
+	fetch("/navbar.html")
+		.then((response) => response.text())
+		.then((html) => {
+			const parser = new DOMParser();
+			const doc = parser.parseFromString(html, "text/html");
+			const nav = doc.querySelector("nav");
+			const navBar = document.createElement("nav");
+			navBar.innerHTML = nav.innerHTML;
+			navBar.id = nav.id;
+			navBar.style.animation = "aparecerDireita 1s ease";
+			document.querySelector("#content").style.marginLeft = "280px";
+			document.querySelector("body").prepend(navBar);
+			const sideNavBtn = doc.querySelector("#sideNavBtn");
+			document.querySelector("body").prepend(sideNavBtn);
+			sideNavBtn.style.animation = "aparecerDireita 1s ease";
+
+			let fechado = false;
+			sideNavBtn.addEventListener("click", () => {
+				if (!fechado) {
+					navBar.style.animation = "sumirEsquerda 0.5s ease forwards";
+					sideNavBtn.innerText = ">";
+					document.querySelector("#content").style.marginLeft = "10px";
+					fechado = true;
+					setTimeout(() => {
+						navBar.remove();
+					}, 350);
+					return;
+				}
+				fechado = false;
+				sideNavBtn.innerText = "<";
+				navBar.style.animation = "aparecerDireita 1s ease";
+				sideNavBtn.style.animation = "aparecerDireita 1s ease";
+				document.querySelector("#content").style.marginLeft = "280px";
+				document.querySelector("body").prepend(navBar);
+			});
+		});
+}
+
+carregarNavbar(window.location.href);
 
 function carregarCSS(doc) {
 	const head = document.querySelector("head");
@@ -85,9 +140,7 @@ function carregarCSS(doc) {
 
 	// Remove CSS que não está mais presente no novo documento
 	existingLinks.forEach((existingLink) => {
-		const isPresentInNewDoc = newLinks.some(
-			(newLink) => newLink.href === existingLink.href
-		);
+		const isPresentInNewDoc = newLinks.some((newLink) => newLink.href === existingLink.href);
 		if (!isPresentInNewDoc) {
 			existingLink.remove();
 		}
@@ -105,7 +158,7 @@ function carregarCSS(doc) {
 			promises.push(
 				new Promise((resolve) => {
 					newCSSLink.onload = resolve;
-				})
+				}),
 			);
 		}
 	});
@@ -179,6 +232,7 @@ window.addEventListener("popstate", () => {
 	if (window.location.hash.includes("#")) {
 		return;
 	}
+	carregarNavbar(window.location.pathname);
 	carregarConteudo(window.location.pathname); // Recarrega o conteúdo da URL
 });
 

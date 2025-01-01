@@ -9,11 +9,64 @@ code {
   color: #e4e69c;
 } */
 
+body {
+	margin: 0;
+	display: flex;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+a {
+	cursor: pointer;
+	color: brown;
+	text-decoration: underline;
+}
+
 nav {
 	border: solid;
 	border-radius: 15px;
 	padding: 7px;
 	width: fit-content;
+}
+
+#content {
+	transition: ease 0.8s;
+	flex: 1;
+	padding: 1rem;
+}
+
+#sideNavbar {
+	font-size: small;
+	font-family: Arial, sans-serif;
+	border-radius: 10px;
+	transition: ease 0.5s;
+	width: 250px;
+	height: 100vh;
+	display: flex;
+	color: brown;
+	background-color: antiquewhite;
+	flex-direction: column;
+	padding: 1rem;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	z-index: 1;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+}
+
+#sideNavbar a {
+	color: brown;
+	text-decoration: underline;
+}
+
+#sideNavBtn {
+	border-radius: 7px;
+	position: fixed;
+	flex: 1;
+	z-index: 2;
+	height: 100vh;
+	width: 15px;
 }
 
 #linkNav {
@@ -100,19 +153,30 @@ td {
 }
 
 /* Define a animação chamada 'sumir' */
-@keyframes sumir {
+@keyframes sumirDireita {
 	0% {
 		transform: translateX(0%);
 		opacity: 100%;
 	}
 	100% {
 		transform: translateX(25%);
+		opacity: 0%;
+	}
+}
+
+@keyframes sumirEsquerda {
+	0% {
+		transform: translateX(0%);
+		opacity: 100%;
+	}
+	100% {
+		transform: translateX(-25%);
 		opacity: 0%;
 	}
 }
 
 /* Define a animação combinada chamada 'aparecer' */
-@keyframes aparecer {
+@keyframes aparecerEsquerda {
 	0% {
 		transform: translateX(25%);
 		opacity: 0%;
@@ -123,6 +187,13 @@ td {
 	}
 }
 
-#content {
-	position: absolute;
+@keyframes aparecerDireita {
+	0% {
+		transform: translateX(-25%);
+		opacity: 0%;
+	}
+	100% {
+		transform: translateX(0%);
+		opacity: 100%;
+	}
 }
