@@ -9,10 +9,6 @@
 	--cor-fnt3: rgb(9, 150, 56);
 	--cor-fnt4: rgb(184, 159, 17);
 }
-body {
-	display: flex;
-	flex-direction: column;
-}
 #texto {
 	transition: ease 0.5s;
 	border: 2px solid;

@@ -1,9 +1,3 @@
-body {
-	display: flex;
-	word-wrap: break-word;
-	flex-direction: column;
-}
-
 #divCopiada {
 	border: 2px solid;
 	border-radius: 15px;

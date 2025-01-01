@@ -30,8 +30,12 @@ span {
 }
 
 #btnBuscar {
-	position: absolute;
-	left: 137px;
+	position: relative;
+	right: 62px;
+}
+
+#btnCadastrar {
+	width: 180px;
 }
 
 #editProdutoContainer {
