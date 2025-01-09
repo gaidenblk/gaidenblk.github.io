@@ -24,6 +24,7 @@ document.addEventListener("click", function (event) {
 		// Verificar se o estado atual existe e se a URL é diferente
 		if (!actualState || actualState.url !== url) {
 			// Carregar conteúdo via AJAX
+
 			carregarNavbar(url);
 			carregarConteudo(url);
 
@@ -69,9 +70,31 @@ function carregarConteudo(url) {
 		.catch((error) => console.error("Erro ao carregar o conteúdo:", error));
 }
 
-function carregarNavbar(url) {
-	const sideNavbar = document.querySelector("#sideNavbar") || null;
-	const sideNavBtn = document.querySelector("#sideNavBtn") || null;
+// Essa função basicamente busca um elemento pré moldado em uma pasta
+// e o carrega em memória para que possa ser usado no DOM
+async function carregarElemento(elemento, caminho) {
+	let item;
+	await fetch(caminho)
+		.then((response) => response.text())
+		.then((html) => {
+			const parser = new DOMParser();
+			const doc = parser.parseFromString(html, "text/html");
+			item = doc.querySelector(elemento);
+		})
+		.catch((error) => console.error("Erro ao carregar o elemento:", error));
+	return item;
+}
+
+async function carregarHeader() {
+	const header = await carregarElemento("header", "/html/header.html");
+	document.querySelector("body").prepend(header);
+}
+
+carregarHeader();
+
+async function carregarNavbar(url) {
+	let sideNavbar = document.querySelector("#sideNavbar") || null;
+	let sideNavBtn = document.querySelector("#sideNavBtn") || null;
 	if (!url.includes("exercicio")) {
 		if (sideNavBtn) {
 			if (sideNavbar) sideNavbar.style.animation = "sumirEsquerda 0.5s ease";
@@ -79,50 +102,39 @@ function carregarNavbar(url) {
 			setTimeout(() => {
 				if (sideNavbar) sideNavbar.remove();
 				if (sideNavBtn) sideNavBtn.remove();
-				document.querySelector("#content").style.marginLeft = "10px";
+				document.querySelector("#content").style.marginLeft = "0px";
 			}, 350);
 		}
 		return;
 	}
 
 	if (sideNavBtn) return;
+	sideNavbar = await carregarElemento("nav", "/html/sideNavbar.html");
+	sideNavbar.style.animation = "aparecerDireita 1s ease";
+	document.querySelector("#content").style.marginLeft = "260px";
+	document.querySelector("body").prepend(sideNavbar);
 
-	fetch("/navbar.html")
-		.then((response) => response.text())
-		.then((html) => {
-			const parser = new DOMParser();
-			const doc = parser.parseFromString(html, "text/html");
-			const nav = doc.querySelector("nav");
-			const navBar = document.createElement("nav");
-			navBar.innerHTML = nav.innerHTML;
-			navBar.id = nav.id;
-			navBar.style.animation = "aparecerDireita 1s ease";
-			document.querySelector("#content").style.marginLeft = "280px";
-			document.querySelector("body").prepend(navBar);
-			const sideNavBtn = doc.querySelector("#sideNavBtn");
-			document.querySelector("body").prepend(sideNavBtn);
-			sideNavBtn.style.animation = "aparecerDireita 1s ease";
+	sideNavBtn = await carregarElemento("button", "/html/sideNavbar.html");
+	sideNavBtn.style.animation = "aparecerDireita 1s ease";
+	document.querySelector("#content").style.marginLeft = "260px";
+	document.querySelector("body").prepend(sideNavBtn);
 
-			let fechado = false;
-			sideNavBtn.addEventListener("click", () => {
-				if (!fechado) {
-					navBar.style.animation = "sumirEsquerda 0.5s ease forwards";
-					sideNavBtn.innerText = ">";
-					document.querySelector("#content").style.marginLeft = "10px";
-					fechado = true;
-					setTimeout(() => {
-						navBar.remove();
-					}, 350);
-					return;
-				}
-				fechado = false;
-				sideNavBtn.innerText = "<";
-				navBar.style.animation = "aparecerDireita 1s ease";
-				sideNavBtn.style.animation = "aparecerDireita 1s ease";
-				document.querySelector("#content").style.marginLeft = "280px";
-				document.querySelector("body").prepend(navBar);
-			});
-		});
+	sideNavBtn.addEventListener("click", () => {
+		if (document.body.contains(sideNavbar)) {
+			sideNavbar.style.animation = "sumirEsquerda 0.5s ease forwards";
+			sideNavBtn.innerText = ">";
+			document.querySelector("#content").style.marginLeft = "10px";
+			setTimeout(() => {
+				sideNavbar.remove();
+			}, 350);
+			return;
+		}
+		sideNavBtn.innerText = "<";
+		sideNavbar.style.animation = "aparecerDireita 1s ease";
+		sideNavBtn.style.animation = "aparecerDireita 1s ease";
+		document.querySelector("#content").style.marginLeft = "260px";
+		document.querySelector("body").prepend(sideNavbar);
+	});
 }
 
 carregarNavbar(window.location.href);

@@ -1,4 +1,4 @@
-button {
+#botaoEbook {
 	cursor: pointer;
 	color: white;
 	background-color: rgb(41, 150, 108);
@@ -22,8 +22,8 @@ button {
 	display: none;
 	background-color: white;
 	padding: 20px;
-	top: 100px;
-	left: 20%;
+	top: 25vh;
+	left: 25vw;
 	position: absolute;
 	width: 350px;
 	border-radius: 15px;
