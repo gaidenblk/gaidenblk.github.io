@@ -18,7 +18,7 @@ a {
 	transition: ease 1s;
 	color: var(--cor-da-fonte-light);
 }
-body.dark-mode a {
+#content.dark-mode a {
 	transition: ease 1s;
 	color: var(--cor-da-fonte-dark);
 }
@@ -31,19 +31,19 @@ body.dark-mode a {
 	color: var(--cor-da-fonte-light);
 	background-color: var(--cor-de-fundo-light);
 }
-body.dark-mode #buttonMode {
+#content.dark-mode #buttonMode {
 	transition: ease 1s;
 	border: none;
 	color: var(--cor-da-fonte-dark);
 	background-color: var(--cor-de-fundo-dark);
 }
-body.dark-mode #voltarParaHome {
+#content.dark-mode #voltarParaHome {
 	transition: ease 1s;
 	border: none;
 	color: var(--cor-da-fonte-dark);
 	background-color: var(--cor-de-fundo-dark);
 }
-body {
+#content {
 	transition: ease 1s;
 	color: var(--cor-da-fonte-light);
 	background-color: var(--cor-de-fundo-light);
@@ -54,7 +54,7 @@ body {
 	text-align: center;
 	font-size: 1.3rem;
 }
-body.dark-mode {
+#content.dark-mode {
 	transition: ease 1s;
 	color: var(--cor-da-fonte-dark);
 	background-color: var(--cor-de-fundo-dark);

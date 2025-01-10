@@ -1,10 +1,17 @@
 document.addEventListener("click", function (event) {
-	// Verifica se o elemento clicado é um link (A) válido
-	const target = event.target.closest("a"); // Procura o elemento mais próximo que seja <a>
+	// Verifica se o clique foi em um link (A) ou dentro de uma div que contém <a>
+	let target = event.target.closest("a"); // Procura o elemento mais próximo que seja <a>
+
+	// Se não for um link <a>, verifica se foi em uma div que contém um link
 	if (!target) {
-		// Se não é um link, sai da função
-		return;
+		const clickable = event.target.closest(".clickable"); // Ajuste para identificar sua div
+		if (clickable) {
+			target = clickable.querySelector("a"); // Encontra o <a> dentro da div
+		}
 	}
+
+	// Se ainda não encontrou um link válido, sai da função
+	if (!target) return;
 
 	// Obtém o URL do atributo href
 	const url = target.getAttribute("href");
@@ -111,12 +118,12 @@ async function carregarNavbar(url) {
 	if (sideNavBtn) return;
 	sideNavbar = await carregarElemento("nav", "/html/sideNavbar.html");
 	sideNavbar.style.animation = "aparecerDireita 1s ease";
-	document.querySelector("#content").style.marginLeft = "260px";
+	document.querySelector("#content").style.marginLeft = "250px";
 	document.querySelector("body").prepend(sideNavbar);
 
 	sideNavBtn = await carregarElemento("button", "/html/sideNavbar.html");
 	sideNavBtn.style.animation = "aparecerDireita 1s ease";
-	document.querySelector("#content").style.marginLeft = "260px";
+	document.querySelector("#content").style.marginLeft = "250px";
 	document.querySelector("body").prepend(sideNavBtn);
 
 	sideNavBtn.addEventListener("click", () => {
