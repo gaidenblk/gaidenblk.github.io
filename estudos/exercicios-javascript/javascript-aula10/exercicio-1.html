@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/main.css" />
+		<title> Exercicio 1</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<p> Reescreva o loop do c&oacute;digo abaixo usando forEach: </p>
+				<pre>
+// Array de filiais
+let filiais = [
+ {
+  cidade: &quot;S&atilde;o Paulo&quot;,
+  endereco: &quot;Rua das Flores, 123&quot;,
+  telefone: &quot;11 1234-5678&quot;,
+  gerente: &quot;Carlos Silva&quot;,
+ },
+ {
+  cidade: &quot;Rio de Janeiro&quot;,
+  endereco: &quot;Av. Atl&acirc;ntica, 456&quot;,
+  telefone: &quot;21 2345-6789&quot;,
+  gerente: &quot;Ana Costa&quot;,
+ },
+ {
+  cidade: &quot;Belo Horizonte&quot;,
+  endereco: &quot;Av. Amazonas, 789&quot;,
+  telefone: &quot;31 3456-7890&quot;,
+  gerente: &quot;Pedro Santos&quot;,
+ },
+];
+for (let i = 0; i &lt; filiais.length; i++) {
+ console.log(&quot;Filial &quot; + (i + 1) + &quot;:&quot;);
+ console.log(&quot;Cidade: &quot; + filiais[i].cidade);
+ console.log(&quot;Endere&ccedil;o: &quot; + filiais[i].endereco);
+ console.log(&quot;Telefone: &quot; + filiais[i].telefone);
+ console.log(&quot;Gerente: &quot; + filiais[i].gerente);
+ console.log(&quot;------------------------------&quot;);
+}
+</pre>
+				<p>
+					Agora mostre como usar map para obter um novo array onde cada elemento
+					&eacute; a cidade de cada filial: [&quot;S&atilde;o Paulo&quot;, &quot;Rio
+					de Janeiro&quot;, ...].
+				</p>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a class="link" onclick="window.history.back()">Lista</a> <br />
+				Voltar para o <a href="/estudos/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+		<script src="./js/exercicio-1.js"></script>
+		<script src="/main.js"></script>
+	</body>
+</html>

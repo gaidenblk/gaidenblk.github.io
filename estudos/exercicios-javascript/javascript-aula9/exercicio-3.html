@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/main.css" />
+		<title> Exercício 3</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<p>
+					Fa&ccedil;a uma p&aacute;gina web com um bot&atilde;o
+					&ldquo;Sortear&rdquo;.
+				</p>
+				<p>
+					Ao clicar nesse bot&atilde;o, a p&aacute;gina deve sortear aleatoriamente 6
+					n&uacute;meros inteiros distintos entre 1 e 30 e armazen&aacute;-los num
+					array, mas n&atilde;o deve exibir esse array para o usu&aacute;rio.
+				</p>
+				<p>
+					Se clicar no &ldquo;Sortear&rdquo; de novo, a p&aacute;gina faz outro
+					sorteio (reconstr&oacute;i o array). A p&aacute;gina deve ter tamb&eacute;m
+					um input num&eacute;rico e um bot&atilde;o &ldquo;Chutar&rdquo;.
+				</p>
+				<p>
+					Ao digitar um n&uacute;mero no input e clicar em &ldquo;Chutar&rdquo;, a
+					p&aacute;gina deve mostrar uma mensagem dizendo se usu&aacute;rio acertou
+					algum dos n&uacute;meros sorteados ou n&atilde;o.
+				</p>
+				<p> Obs: Acessando o Console, ele mostra a lista dos números sorteados. </p>
+			</div>
+			<div id="exercicio">
+				<button id="btnSortear">Sortear</button>
+				<div id="container"></div>
+				<p></p>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a class="link" onclick="window.history.back()">Lista</a> <br />
+				Voltar para o <a href="/estudos/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+		<script src="./js/exercicio-3.js"></script>
+		<script src="/main.js"></script>
+	</body>
+</html>

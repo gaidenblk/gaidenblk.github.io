@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/main.css" />
+		<title>Exercício 4 Dataset</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<h3>Versão Dataset</h3>
+				<p>
+					Vamos fazer uma lista de tarefas com prioridade. A p&aacute;gina
+					ter&aacute; um &lt;input&gt; para digitar a tarefa, e um bot&atilde;o
+					&ldquo;Adicionar&rdquo; para adicion&aacute;-la. Ao ser adicionada, a
+					tarefa aparece numa lista de tarefas (pode ser uma &lt;ul&gt; onde cada
+					tarefa &eacute; uma &lt;li&gt;, ou como preferir). A princ&iacute;pio,
+					todas as tarefas t&ecirc;m prioridade baixa. Ao clicar no texto de uma
+					tarefa que j&aacute; foi adicionada, ela muda para prioridade m&eacute;dia,
+					e isso &eacute; visualmente representado fazendo o plano de fundo da tarefa
+					ficar amarelo. Ao clicar de novo no texto da tarefa, ela muda para
+					prioridade alta, representada com fundo vermelho. Ao clicar de novo na
+					tarefa, ela volta para prioridade baixa (sem cor de fundo). E assim por
+					diante de maneira c&iacute;clica: se clicar de novo volta para prioridade
+					m&eacute;dia (etc.)
+				</p>
+				<p>Evidentemente, cada tarefa tem sua prioridade independente das outras
+					tarefas.
+				</p>
+			</div>
+			<div id="exercicio">
+				Tarefa:
+				<input type="text" />
+				<button>botão</button>
+				<ul></ul>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a class="link" onclick="window.history.back()">Lista</a> <br />
+				Voltar para o <a href="/estudos/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+		<script src="./js/exercicio-4 ds.js"></script>
+		<script src="/main.js"></script>
+	</body>
+</html>

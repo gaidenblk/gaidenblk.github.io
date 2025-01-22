@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/main.css" />
+		<link rel="stylesheet" href="./css/exercicio-1.css">
+		<title> Exercício 1</title>
+	</head>
+	<body>
+		<main id="content">
+			<div>
+				Insira um Cep:
+				<input type="text" id="inptCep" />
+				<button id="btnConsultar">Consultar</button>
+			</div>
+			<div id="container"></div>
+			<button id="btnMapa" style="display: none">Exibir Mapa</button>
+			<div id="containerMapa">
+				<button id="fecharMapa">x</button>
+				<iframe id="mapa" src="" frameborder="0" width="600" height="450"></iframe>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a class="link" onclick="window.history.back()">Lista</a> <br />
+				Voltar para o <a href="/estudos/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+		<script src="./js/exercicio-1.js"></script>
+		<script src="/main.js"></script>
+	</body>
+</html>

@@ -199,7 +199,7 @@ td {
 }
 
 #sideNavBtn {
-	transition: ease 0.5s;
+	transition: none;
 	color: green;
 	border: solid green 1px;
 	border-radius: 0;
@@ -210,6 +210,11 @@ td {
 	height: calc(100vh - 30px);
 	width: 15px;
 	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#sideNavBtn:hover {
+	transition: ease 0.5s;
+	background-color: grey;
 }
 
 #linkNav {

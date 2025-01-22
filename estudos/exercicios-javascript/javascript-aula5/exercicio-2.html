@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/main.css" />
+		<title>Exercício 2</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				Quando o usu&aacute;rio digita uma tarefa no input e clica em
+				&ldquo;Adicionar&rdquo;, ela &eacute; adiciona na lista, e o input &eacute;
+				limpado. Mas tem um problema de usabilidade: normalmente esperamos que, ao
+				digitar a tarefa e apertar Enter, a tarefa tamb&eacute;m seria adicionada na
+				lista (sem necessidade de pegar o mouse e clicar no bot&atilde;o). Mas da
+				maneira como est&aacute;, apertar Enter n&atilde;o faz nada. Para melhorar
+				isso, voc&ecirc; deve alterar o HTML e o javascript: No HTML, deve usar um
+				&lt;form&gt; em volta do &lt;input&gt; e &lt;button&gt; (isso basta para
+				funcionar o Enter). E no javascript deve mudar o que for necess&aacute;rio para
+				funcionar (obs: o &lt;form&gt; pode causar o recarregamento da p&aacute;gina,
+				voc&ecirc; deve evitar isso)
+			</div>
+			<div id="exercicio">
+				<form action="">
+					Tarefa: <input id="input-task" />
+					<br />
+					<button id="add-button">Adicionar</button>
+				</form>
+				<ul id="task-list"></ul>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a class="link" onclick="window.history.back()">Lista</a> <br />
+				Voltar para o <a href="/estudos/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+		<script src="./js/exercicio-2.js"></script>
+		<script src="/main.js"></script>
+	</body>
+</html>

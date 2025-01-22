@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/main.css" />
+		<title> Exercício 1</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<p>
+					Fa&ccedil;a uma p&aacute;gina web contendo o seguinte formul&aacute;rio:
+				</p>
+				<p>
+					Ao clicar no bot&atilde;o Listar, valide que ambos os inputs s&atilde;o
+					num&eacute;ricos e inteiros, e o n&uacute;mero &ldquo;In&iacute;cio&rdquo;
+					&eacute; menor que o n&uacute;mero &ldquo;Fim&rdquo; (caso contr&aacute;rio
+					exiba uma mensagem de erro e n&atilde;o fa&ccedil;a mais nada).
+				</p>
+				<p>
+					Se a valida&ccedil;&atilde;o passar, exiba na p&aacute;gina uma &lt;ul&gt;
+					, e dentro dela, um &lt;li&gt; para cada n&uacute;mero entre o
+					n&uacute;mero &ldquo;In&iacute;cio&rdquo; (inclusive) e o n&uacute;mero
+					&ldquo;Fim&rdquo; (exclusive, ou seja, pare 1 antes do Fim). Note que
+					n&atilde;o precisa de array para fazer isso.
+				</p>
+			</div>
+			<div id="exercicio">
+				<div>
+					Inicio:
+					<input type="text" name="" id="inptInicio" />
+					Fim:
+					<input type="text" name="" id="inptFim" />
+				</div>
+				<button id="btnListar">Listar</button>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a class="link" onclick="window.history.back()">Lista</a> <br />
+				Voltar para o <a href="/estudos/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+		<script src="./js/exercicio-1.js"></script>
+		<script src="/main.js"></script>
+	</body>
+</html>

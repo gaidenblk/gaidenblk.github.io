@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/main.css" />
+		<title>Exercício 6</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				Fa&ccedil;a um &lt;input type=&quot;text&quot;&gt; para preenchimento do nome
+				completo da pessoa. Esse input s&oacute; deve aceitar letras (min&uacute;sculas
+				ou mai&uacute;sculas, somente sem acentos) e espa&ccedil;os em branco. Se o
+				usu&aacute;rio digitar um caractere que n&atilde;o &eacute; permitido, o
+				caractere simplesmente n&atilde;o aparece no input como se n&atilde;o tivesse
+				sido digitado. Sugest&atilde;o: pesquise sobre event.key Sugest&atilde;o 2:
+				saiba que o evento &ldquo;input&rdquo; &eacute; disparado depois que o input
+				mudou de valor.
+			</div>
+			<div id="exercicio">
+				<input id="nomeCompleto" type="text" oninput="validarInput(event)" />
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a class="link" onclick="window.history.back()">Lista</a> <br />
+				Voltar para o <a href="/estudos/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+		<script src="./js/exercicio-6.js"></script>
+		<script src="/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/main.css" />
+		<title> Exercício 4</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				<p>
+					Crie uma p&aacute;gina web que pe&ccedil;a ao usu&aacute;rio que digite a
+					data de nascimento de uma pessoa e seu g&ecirc;nero.
+				</p>
+				<p>
+					Ap&oacute;s clicar em um bot&atilde;o de &ldquo;verificar&rdquo; realize os
+					seguintes procedimentos: Armazene as informa&ccedil;&otilde;es inseridas
+					num objeto chamado person, nas propriedades birthdate e gender,
+					respectivamente.
+				</p>
+				<p>
+					O objeto criado deve conter em uma propriedade daysToDeath uma
+					fun&ccedil;&atilde;o (m&eacute;todo) que, de acordo com os valores das
+					propriedades birthdate e gender, retorne a quantidade de dias
+					(aproximadamente) que faltam para a sua morte considerando a expectativa de
+					vida fornecida pelo IBGE de 73,1 anos para homens e 80,1 anos para
+					mulheres.
+				</p>
+				<p> Mostre o n&uacute;mero de dias restantes para o usu&aacute;rio. </p>
+			</div>
+			<div id="exercicio">
+				<div>
+					Gênero:
+					<select id="slctGenero">
+						<option value="m">Masculino</option>
+						<option value="f">Feminino</option>
+					</select>
+				</div>
+				<div>
+					Nascimento:
+					<input id="inptNascimento" type="date" />
+				</div>
+				<button id="btnButton">Verificar</button>
+				<p id="container"></p>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a class="link" onclick="window.history.back()">Lista</a> <br />
+				Voltar para o <a href="/estudos/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+		<script src="./js/exercicio-4.js"></script>
+		<script src="/main.js"></script>
+	</body>
+</html>

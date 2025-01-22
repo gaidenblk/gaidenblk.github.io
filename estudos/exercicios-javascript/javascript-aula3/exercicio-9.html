@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/main.css" />
+		<link rel="stylesheet" href="./css/exercicio-9.css" />
+		<title>Exercício 9</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				O Objetivo desse exercício é criar um aleatorizador de números,<br />
+				onde deve ser inserido um valor mínimo e outro máximo,<br />
+				o número sorteado aparecerá logo abaixo.<br /><br />
+			</div>
+			<div id="exercicio">
+				<div>
+					Valor mínimo:
+					<input type="text" id="min" />
+				</div>
+
+				<div>
+					Valor máximo:
+					<input type="text" id="max" />
+				</div>
+
+				<button id="sorteia">Sortear</button>
+				<p id="resultado">Número sorteado:</p>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a class="link" onclick="window.history.back()">Lista</a> <br />
+				Voltar para o <a href="/estudos/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+		<script src="./js/exercicio-9.js"></script>
+		<script src="/main.js"></script>
+	</body>
+</html>

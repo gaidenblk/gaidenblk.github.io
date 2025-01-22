@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/main.css" />
+		<link rel="stylesheet" href="./css/exercicio-4.css" />
+		<title>Exercício 4</title>
+	</head>
+	<body>
+		<main id="content">
+			<div id="explicacao">
+				O objetivo do Exercício é:
+				<ul>
+					<li>
+						Uma página web que contenha um formulário que possibilite:
+						<ul>
+							<li>
+								A inserção pelo usuário de um valor de peso em kg (input
+								type=“text”)
+							</li>
+							<li>
+								A inserção pelo usuário de um valor de altura em centímetros
+								(input type=“text”)
+							</li>
+							<li>Clicar em um botão de calcular</li>
+							<li>
+								Após clicar no botão de calcular
+								<ul>
+									<li>
+										Exibir o valor do Índice de Massa Corporal calculado
+									</li>
+									<li>
+										Informar também, a classificação do IMC (“abaixo do
+										peso”, “peso normal”, etc.)
+									</li>
+									<li>
+										segundo a referência:
+										<a href="https://bvsms.saude.gov.br/bvs/dicas/215_obesidade.html">
+											https://bvsms.saude.gov.br/bvs/dicas/215_obesidade.html</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="exercicio">
+				<div>
+					Peso em Kg:
+					<input id="peso" type="text" />
+				</div>
+				<div>
+					Altura em cm:
+					<input id="altura" type="text" />
+				</div>
+				<button id="botaoCalcula">calcular</button>
+				<p id="imc">IMC</p>
+				<p id="classificacao">Classificação do IMC</p>
+			</div>
+			<nav id="linkNav">
+				Voltar para a <a class="link" onclick="window.history.back()">Lista</a> <br />
+				Voltar para o <a href="/estudos/exercicios-javascript/" class="link">Inicio</a>
+			</nav>
+		</main>
+		<script src="./js/exercicio-4.js"></script>
+		<script src="/main.js"></script>
+	</body>
+</html>

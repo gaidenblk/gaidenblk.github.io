@@ -32,7 +32,7 @@ document.addEventListener("click", function (event) {
 		if (!actualState || actualState.url !== url) {
 			// Carregar conteúdo via AJAX
 
-			carregarNavbar(url);
+			carregarSideNavBar(url);
 			carregarConteudo(url);
 
 			// Atualizar o histórico do navegador
@@ -99,7 +99,7 @@ async function carregarHeader() {
 
 carregarHeader();
 
-async function carregarNavbar(url) {
+async function carregarSideNavBar(url) {
 	let sideNavbar = document.querySelector("#sideNavbar") || null;
 	let sideNavBtn = document.querySelector("#sideNavBtn") || null;
 	if (!url.includes("exercicio")) {
@@ -116,12 +116,21 @@ async function carregarNavbar(url) {
 	}
 
 	if (sideNavBtn) return;
-	sideNavbar = await carregarElemento("nav", "/html/sideNavbar.html");
+	let elementoBase;
+	if (url.includes("javascript")) {
+		elementoBase = await carregarElemento("html", "/html/sideNavbarJS.html");
+	}
+
+	if (url.includes("css")) {
+		elementoBase = await carregarElemento("html", "/html/sideNavbarCSS.html");
+	}
+
+	sideNavbar = elementoBase.querySelector("nav");
 	sideNavbar.style.animation = "aparecerDireita 1s ease";
 	document.querySelector("#content").style.marginLeft = "250px";
 	document.querySelector("body").prepend(sideNavbar);
 
-	sideNavBtn = await carregarElemento("button", "/html/sideNavbar.html");
+	sideNavBtn = elementoBase.querySelector("button");
 	sideNavBtn.style.animation = "aparecerDireita 1s ease";
 	document.querySelector("#content").style.marginLeft = "250px";
 	document.querySelector("body").prepend(sideNavBtn);
@@ -139,12 +148,12 @@ async function carregarNavbar(url) {
 		sideNavBtn.innerText = "<";
 		sideNavbar.style.animation = "aparecerDireita 1s ease";
 		sideNavBtn.style.animation = "aparecerDireita 1s ease";
-		document.querySelector("#content").style.marginLeft = "260px";
+		document.querySelector("#content").style.marginLeft = "250px";
 		document.querySelector("body").prepend(sideNavbar);
 	});
 }
 
-carregarNavbar(window.location.href);
+carregarSideNavBar(window.location.href);
 
 function carregarCSS(doc) {
 	const head = document.querySelector("head");
@@ -251,7 +260,7 @@ window.addEventListener("popstate", () => {
 	if (window.location.hash.includes("#")) {
 		return;
 	}
-	carregarNavbar(window.location.pathname);
+	carregarSideNavBar(window.location.pathname);
 	carregarConteudo(window.location.pathname); // Recarrega o conteúdo da URL
 });
 
