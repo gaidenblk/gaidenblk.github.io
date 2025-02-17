@@ -33,7 +33,7 @@
 	});
 
 	fntTamanho.addEventListener("change", function () {
-		config.tamanhoFonte = this.value;
+		config.tamanhoFonte = this.value + "px";
 		textarea.style.fontSize = config.tamanhoFonte;
 		localStorage.setItem("config", JSON.stringify(config));
 	});

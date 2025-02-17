@@ -41,6 +41,15 @@ document.addEventListener("click", function (event) {
 	}
 });
 
+document.addEventListener("click", (event) => {
+	if (event.target.id === "btnExplicacao") {
+		const explicacao = event.target.nextElementSibling; // A div explicação vem logo depois do botão
+		if (explicacao && explicacao.id === "explicacao") {
+			explicacao.style.display = explicacao.style.display === "none" ? "block" : "none";
+		}
+	}
+});
+
 function carregarConteudo(url) {
 	// Verifica se a URL está duplicada e corrige se necessário
 	if (url.startsWith(window.location.origin)) {
