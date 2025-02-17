@@ -10,7 +10,7 @@ export function principal() {
 			history.pushState(
 				{},
 				"",
-				`/exercicios-javascript/javascript-aula14/${secoes[i].toLowerCase()}`,
+				`/estudos/exercicios-javascript/javascript-aula14/${secoes[i].toLowerCase()}`,
 			);
 			render(); // Chama render para atualizar o conteúdo da página
 		});

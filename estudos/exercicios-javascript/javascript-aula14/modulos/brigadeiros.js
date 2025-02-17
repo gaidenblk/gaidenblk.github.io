@@ -6,7 +6,11 @@ export default function brigadeiros() {
 	const button = document.createElement("button");
 	button.innerText = "Voltar";
 	button.addEventListener("click", () => {
-		history.pushState({}, "", `/exercicios-javascript/javascript-aula14/exercicio-1.html`);
+		history.pushState(
+			{},
+			"",
+			`/estudos/exercicios-javascript/javascript-aula14/exercicio-1.html`,
+		);
 		render(); // Chama render para atualizar o conteúdo da página
 	});
 	divBrigadeiros.appendChild(button);
