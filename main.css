@@ -17,6 +17,11 @@ body {
 	overflow-x: hidden;
 }
 
+ul {
+	list-style: none;
+	padding: 0;
+}
+
 a {
 	cursor: pointer;
 	color: green;
@@ -88,9 +93,8 @@ td {
 .customUl li {
 	transition: ease;
 	border-radius: 7px;
-	display: flex;
+	margin: 5px;
 	padding: 5px;
-	align-items: center;
 }
 
 .customUl li:hover {
@@ -102,7 +106,7 @@ td {
 }
 
 #content {
-	margin-top: 30px;
+	margin-top: 45px;
 	transition: ease 0.8s;
 	flex: 1;
 	padding: 1rem;
@@ -134,12 +138,13 @@ td {
 	padding: 7px;
 }
 
+/* Seção do HEADER*/
 .header {
 	position: fixed;
 	font-size: medium;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	width: 100%;
-	height: 30px;
+	height: 45px;
 	background-color: rgb(138, 170, 231);
 	color: #345e46;
 	top: 0;
@@ -149,87 +154,9 @@ td {
 
 .header nav {
 	display: flex;
+	align-items: center;
+	justify-content: space-around;
 	width: 100%;
-}
-
-#sideNavbar {
-	margin-top: 31px;
-	scrollbar-color: transparent transparent;
-	scrollbar-width: thin;
-	overflow-y: scroll;
-	font-family: Arial, sans-serif;
-	transition: ease 0.5s;
-	width: 250px;
-	display: flex;
-	background-color: antiquewhite;
-	flex-direction: column;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	position: fixed;
-	z-index: 1;
-	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
-}
-
-#sideNavbar:hover {
-	scrollbar-color: rgb(95, 168, 95) transparent;
-}
-
-#sideNavbar li {
-	display: block;
-	margin: 5px;
-	padding: 2px;
-	background: rgb(250, 235, 215);
-	background: linear-gradient(180deg, rgba(250, 235, 215, 1) 50%, rgba(227, 227, 169, 1) 100%);
-}
-
-#sideNavbar li :hover {
-	border-radius: 7px;
-	background: #345e46;
-	color: antiquewhite;
-}
-
-#sideNavbar a {
-	padding: 5px;
-	display: flex;
-	flex-direction: column;
-}
-
-#sideNavbar strong {
-	font-size: 14px;
-}
-
-#sideNavbar small {
-	font-size: 11px;
-	opacity: 0.7;
-}
-
-#sideNavBtn {
-	transition: none;
-	color: green;
-	border: solid green 1px;
-	border-radius: 0;
-	margin: 0;
-	margin-top: 30px;
-	position: fixed;
-	z-index: 2;
-	height: calc(100vh - 30px);
-	width: 15px;
-	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-}
-
-#sideNavBtn:hover {
-	transition: ease 0.5s;
-	background-color: grey;
-}
-
-#linkNav {
-	margin-top: 10px;
-	background-color: aliceblue;
-	border: solid;
-	border-radius: 15px;
-	padding: 7px;
-	width: fit-content;
 }
 
 .logo {
@@ -258,10 +185,133 @@ td {
 }
 
 .menu {
+	cursor: pointer;
+	padding-left: 250px;
 	display: flex;
 	width: 100%;
 	justify-content: space-evenly;
 	align-items: center;
+}
+
+.menu > li,
+.menu > a {
+	width: 100px;
+	text-align: center;
+	display: inline-block;
+}
+
+.menu li {
+	position: relative;
+}
+
+.submenu {
+	display: none;
+	font-size: smaller;
+	width: 110px;
+	position: absolute;
+	right: 0;
+	background-color: aquamarine;
+	border-radius: 0 0 7px 7px;
+}
+
+.submenu2 {
+	display: none;
+	font-size: smaller;
+	width: 110px;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	background-color: aquamarine;
+	border-radius: 0 7px 7px 7px;
+}
+
+.menu li:hover > .submenu {
+	display: block;
+}
+
+.submenu li:hover > .submenu2 {
+	display: block;
+}
+
+/*Seção do SIDENAVBAR*/
+.sideNavbar {
+	margin-top: 46px;
+	scrollbar-color: transparent transparent;
+	scrollbar-width: thin;
+	overflow-y: scroll;
+	font-family: Arial, sans-serif;
+	transition: ease 0.5s;
+	width: 250px;
+	display: flex;
+	background-color: antiquewhite;
+	flex-direction: column;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	z-index: 1;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+}
+
+.sideNavbar:hover {
+	scrollbar-color: rgb(95, 168, 95) transparent;
+}
+
+.sideNavbar li {
+	display: block;
+	margin: 5px;
+	padding: 2px;
+	background: rgb(250, 235, 215);
+	background: linear-gradient(180deg, rgba(250, 235, 215, 1) 50%, rgba(227, 227, 169, 1) 100%);
+}
+
+.sideNavbar li :hover {
+	border-radius: 7px;
+	background: #345e46;
+	color: antiquewhite;
+}
+
+.sideNavbar a {
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+.sideNavbar strong {
+	font-size: 14px;
+}
+
+.sideNavbar small {
+	font-size: 11px;
+	opacity: 0.7;
+}
+
+.sideNavBtn {
+	transition: none;
+	color: green;
+	border: solid green 1px;
+	border-radius: 0;
+	margin: 0;
+	margin-top: 45px;
+	position: fixed;
+	z-index: 2;
+	height: calc(100vh - 30px);
+	width: 15px;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.sideNavBtn:hover {
+	transition: ease 0.5s;
+	background-color: grey;
+}
+
+#linkNav {
+	margin-top: 10px;
+	background-color: aliceblue;
+	border: solid;
+	border-radius: 15px;
+	padding: 7px;
+	width: fit-content;
 }
 
 /* Define a animação chamada 'moverLado' */

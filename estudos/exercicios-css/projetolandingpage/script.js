@@ -3,7 +3,7 @@ function toggleDarkMode() {
 	content.classList.toggle("dark-mode");
 
 	var buttonMode = document.getElementById("buttonMode");
-	if (body.classList.contains("dark-mode")) {
+	if (content.classList.contains("dark-mode")) {
 		buttonMode.textContent = "light_mode";
 	} else {
 		buttonMode.textContent = "dark_mode";

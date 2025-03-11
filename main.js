@@ -109,30 +109,35 @@ async function carregarHeader() {
 carregarHeader();
 
 async function carregarSideNavBar(url) {
-	let sideNavbar = document.querySelector("#sideNavbar") || null;
-	let sideNavBtn = document.querySelector("#sideNavBtn") || null;
+	let sideNavbar = document.querySelector(".sideNavbar") || null;
+	let sideNavBtn = document.querySelector(".sideNavBtn") || null;
 	if (!url.includes("exercicio")) {
 		if (sideNavBtn) {
 			if (sideNavbar) sideNavbar.style.animation = "sumirEsquerda 0.5s ease";
 			if (sideNavBtn) sideNavBtn.style.animation = "sumirEsquerda 0.5s ease";
 			setTimeout(() => {
-				if (sideNavbar) sideNavbar.remove();
-				if (sideNavBtn) sideNavBtn.remove();
-				document.querySelector("#content").style.marginLeft = "0px";
+				removeSideNavBar();
 			}, 350);
 		}
 		return;
 	}
 
-	if (sideNavBtn) return;
-	let elementoBase;
+	let elementoBase = null;
 	if (url.includes("javascript")) {
+		if (sideNavbar?.id !== "jsNav") {
+			removeSideNavBar();
+		} else return;
 		elementoBase = await carregarElemento("html", "/html/sideNavbarJS.html");
 	}
 
 	if (url.includes("css")) {
+		if (sideNavbar?.id !== "cssNav") {
+			removeSideNavBar();
+		} else return;
 		elementoBase = await carregarElemento("html", "/html/sideNavbarCSS.html");
 	}
+
+	if (elementoBase === null) return;
 
 	sideNavbar = elementoBase.querySelector("nav");
 	sideNavbar.style.animation = "aparecerDireita 1s ease";
@@ -160,6 +165,12 @@ async function carregarSideNavBar(url) {
 		document.querySelector("#content").style.marginLeft = "250px";
 		document.querySelector("body").prepend(sideNavbar);
 	});
+
+	function removeSideNavBar() {
+		if (sideNavbar) sideNavbar.remove();
+		if (sideNavBtn) sideNavBtn.remove();
+		document.querySelector("#content").style.marginLeft = "0px";
+	}
 }
 
 carregarSideNavBar(window.location.href);
