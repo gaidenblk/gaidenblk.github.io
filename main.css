@@ -10,6 +10,13 @@ code {
 } */
 
 /* Area reservada aos estilos genéricos*/
+:root {
+	--base-color: #002859;
+}
+
+* {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
 body {
 	margin: 0;
@@ -18,18 +25,19 @@ body {
 }
 
 ul {
+	list-style-type: none;
 	list-style: none;
 	padding: 0;
 }
 
 a {
 	cursor: pointer;
-	color: green;
+	color: var(--base-color);
 	text-decoration: none;
 }
 
 a:visited {
-	color: green;
+	color: var(--base-color);
 }
 
 button {
@@ -97,10 +105,6 @@ td {
 	padding: 5px;
 }
 
-.customUl li:hover {
-	background-color: aquamarine;
-}
-
 .clickable {
 	cursor: pointer;
 }
@@ -114,6 +118,7 @@ td {
 
 #btnExplicacao {
 	position: absolute;
+	color: var(--base-color);
 	right: 20px;
 	width: 25px;
 	height: 25px;
@@ -140,13 +145,13 @@ td {
 
 /* Seção do HEADER*/
 .header {
+	border-bottom: #002859 solid 1px;
 	position: fixed;
 	font-size: medium;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	width: 100%;
 	height: 45px;
 	background-color: rgb(138, 170, 231);
-	color: #345e46;
 	top: 0;
 	display: flex;
 	z-index: 2;
@@ -154,12 +159,13 @@ td {
 
 .header nav {
 	display: flex;
+	justify-content: end;
 	align-items: center;
-	justify-content: space-around;
 	width: 100%;
 }
 
 .logo {
+	cursor: pointer;
 	transition: ease;
 	border-radius: 7px;
 	display: flex;
@@ -169,28 +175,35 @@ td {
 }
 
 .logo > a {
-	color: rgb(97, 36, 36);
+	display: flex;
+}
+
+.logo > a > img {
+	height: 25px;
+}
+
+.logo > img {
+	width: 35px;
+	margin-right: 5px;
+	border-radius: 5px;
 }
 
 .logo:hover {
-	background-color: aquamarine;
+	background-color: rgb(109, 134, 218);
 }
 
 .logo:active {
 	background-color: purple;
 }
 
-.logo > a:active {
-	color: antiquewhite;
-}
-
 .menu {
-	cursor: pointer;
-	padding-left: 250px;
+	margin: 0;
 	display: flex;
-	width: 100%;
-	justify-content: space-evenly;
+	position: relative;
+	justify-items: center;
 	align-items: center;
+	height: 100%;
+	margin-right: 5%;
 }
 
 .menu > li,
@@ -201,41 +214,79 @@ td {
 }
 
 .menu li {
+	margin-left: 5px;
+	margin-right: 5px;
+	border-bottom: solid #002859 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 35px;
 	position: relative;
+	border-radius: 7px;
+}
+
+.menu li:hover {
+	background: var(--base-color);
+	color: antiquewhite;
+}
+
+.menu li:hover > a {
+	color: antiquewhite;
 }
 
 .submenu {
+	border-radius: 7px;
 	display: none;
+	flex-direction: column;
+	justify-content: center;
 	font-size: smaller;
-	width: 110px;
+	width: 100px;
+	height: 45px;
 	position: absolute;
-	right: 0;
-	background-color: aquamarine;
-	border-radius: 0 0 7px 7px;
+	top: 35px;
+}
+
+.submenu li {
+	height: 45px;
+	margin: 3px 0 3px 0;
 }
 
 .submenu2 {
+	border-radius: 7px;
 	display: none;
+	flex-direction: column;
+	justify-content: center;
 	font-size: smaller;
-	width: 110px;
+	width: 100px;
 	position: absolute;
-	top: 0;
+	top: -3px;
 	left: 100%;
-	background-color: aquamarine;
-	border-radius: 0 7px 7px 7px;
+}
+
+.submenu2 a {
+	color: antiquewhite;
+}
+
+.submenu li:hover {
+	background: gray;
 }
 
 .menu li:hover > .submenu {
-	display: block;
+	display: flex;
+	background: var(--base-color);
+}
+.menu li:hover > .submenu a {
+	display: flex;
 }
 
 .submenu li:hover > .submenu2 {
-	display: block;
+	display: flex;
+	background: var(--base-color);
 }
 
 /*Seção do SIDENAVBAR*/
 .sideNavbar {
-	margin-top: 46px;
+	margin-top: 45px;
 	scrollbar-color: transparent transparent;
 	scrollbar-width: thin;
 	overflow-y: scroll;
@@ -243,7 +294,7 @@ td {
 	transition: ease 0.5s;
 	width: 250px;
 	display: flex;
-	background-color: antiquewhite;
+	background-color: rgb(164, 185, 253);
 	flex-direction: column;
 	top: 0;
 	bottom: 0;
@@ -254,20 +305,20 @@ td {
 }
 
 .sideNavbar:hover {
-	scrollbar-color: rgb(95, 168, 95) transparent;
+	scrollbar-color: var(--base-color) transparent;
 }
 
 .sideNavbar li {
 	display: block;
 	margin: 5px;
 	padding: 2px;
-	background: rgb(250, 235, 215);
-	background: linear-gradient(180deg, rgba(250, 235, 215, 1) 50%, rgba(227, 227, 169, 1) 100%);
+	background: rgb(164, 185, 253);
+	background: linear-gradient(180deg, rgb(164, 185, 253) 50%, #4e85c9 100%);
 }
 
 .sideNavbar li :hover {
 	border-radius: 7px;
-	background: #345e46;
+	background: var(--base-color);
 	color: antiquewhite;
 }
 
@@ -288,8 +339,8 @@ td {
 
 .sideNavBtn {
 	transition: none;
-	color: green;
-	border: solid green 1px;
+	color: #002859;
+	border: solid var(--base-color) 1px;
 	border-radius: 0;
 	margin: 0;
 	margin-top: 45px;
@@ -302,13 +353,12 @@ td {
 
 .sideNavBtn:hover {
 	transition: ease 0.5s;
-	background-color: grey;
+	background-color: rgb(164, 185, 253);
 }
 
 #linkNav {
 	margin-top: 10px;
-	background-color: aliceblue;
-	border: solid;
+	border-bottom: solid #002859;
 	border-radius: 15px;
 	padding: 7px;
 	width: fit-content;

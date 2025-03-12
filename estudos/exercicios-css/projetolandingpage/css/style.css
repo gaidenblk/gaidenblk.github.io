@@ -6,45 +6,40 @@
 	--cor-da-fonte-dark: aliceblue;
 }
 #voltarParaHome {
-	transition: ease 1s;
+	transition: ease 0.8s;
 	position: sticky;
 	right: 95vw;
 	border: none;
+	height: fit-content;
 	color: var(--cor-da-fonte-light);
 	background-color: var(--cor-de-fundo-light);
 }
 a {
 	text-decoration: none;
-	transition: ease 1s;
 	color: var(--cor-da-fonte-light);
 }
 #content.dark-mode a {
-	transition: ease 1s;
 	color: var(--cor-da-fonte-dark);
 }
 #buttonMode {
 	cursor: pointer;
 	position: fixed;
 	right: 0;
-	transition: ease 1s;
 	border: none;
 	color: var(--cor-da-fonte-light);
 	background-color: var(--cor-de-fundo-light);
 }
 #content.dark-mode #buttonMode {
-	transition: ease 1s;
 	border: none;
 	color: var(--cor-da-fonte-dark);
 	background-color: var(--cor-de-fundo-dark);
 }
 #content.dark-mode #voltarParaHome {
-	transition: ease 1s;
 	border: none;
 	color: var(--cor-da-fonte-dark);
 	background-color: var(--cor-de-fundo-dark);
 }
 #content {
-	transition: ease 1s;
 	color: var(--cor-da-fonte-light);
 	background-color: var(--cor-de-fundo-light);
 	display: flex;
@@ -55,7 +50,6 @@ a {
 	font-size: 1.3rem;
 }
 #content.dark-mode {
-	transition: ease 1s;
 	color: var(--cor-da-fonte-dark);
 	background-color: var(--cor-de-fundo-dark);
 }
@@ -128,7 +122,6 @@ label {
 	justify-content: space-evenly;
 }
 #botao input {
-	transition: ease 1s;
 	border-radius: 5px;
 	height: 40px;
 	background-color: rgb(48, 48, 216);
