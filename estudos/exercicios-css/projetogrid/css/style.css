@@ -1,0 +1,118 @@
+#content {
+	font-family: "Mitr", sans-serif;
+	background-color: rgb(46, 46, 46);
+}
+#content header {
+	background-color: rgb(46, 46, 46);
+	color: white;
+}
+#content p {
+	font-size: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+#content h4 {
+	color: red;
+}
+.topBox {
+	font-size: smaller;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.topBox img {
+	cursor: pointer;
+	width: 22px;
+	border: 1px ridge red;
+	border-radius: 2px;
+}
+
+#webshocker {
+	display: flex;
+	flex-direction: column;
+	color: white;
+	align-items: center;
+	text-align: center;
+	font-size: large;
+	overflow: visible;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.button {
+	cursor: pointer;
+	transition: ease 1s;
+	color: antiquewhite;
+	width: 115px;
+	height: 50px;
+	background-color: red;
+	border: 2px solid red;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+}
+.button:hover {
+	background-color: antiquewhite;
+	color: red;
+	border: 2px solid rgb(46, 46, 46);
+	transition: ease 1s;
+}
+#figures {
+	position: relative;
+	left: -16px;
+	width: 103%;
+	color: black;
+	background-color: antiquewhite;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#figures img {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.chess img {
+	max-width: 90%;
+}
+.chess {
+	font-size: 12px;
+	color: antiquewhite;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.chessbox {
+	margin: 3%;
+	width: 200px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+}
+
+#bottom {
+	position: relative;
+	left: -16px;
+	width: 103%;
+	background-color: antiquewhite;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+#bottom > div {
+	display: flex;
+	flex-direction: column;
+	margin: 1%;
+	width: 300px;
+	align-items: center;
+}
+#bottom > div .button {
+	width: 100%;
+}

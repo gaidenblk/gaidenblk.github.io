@@ -113,7 +113,8 @@ td {
 	margin-top: 45px;
 	transition: ease 0.8s;
 	flex: 1;
-	padding: 1rem;
+	padding-top: 1rem;
+	padding-left: 1rem;
 }
 
 #btnExplicacao {
