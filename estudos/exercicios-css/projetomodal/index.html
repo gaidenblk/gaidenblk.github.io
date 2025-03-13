@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Estudos CSS</title>
+
+</head>
+<body>
+    <h1>Minhas Pixel Arts</h1>
+    <p>Clique nas imagens para ampliar</p>
+    <div class="pixelArt">
+        <img id="norbut" src="Norfair Bubbles Tv10X.png" alt="Norfair Bubbles">
+    </div>
+    <div class="pixelArt">
+        <img id="campobut" src="CasaCampo10X.png" alt="Casa no Campo">
+    </div>
+    <section id="pixelArts">
+        <div id="norfair" class="modal">
+            <img src="Norfair Bubbles Tv10X.png" alt="Bolhas de Norfair">
+            <span class="close">&times;</span>
+            <p>Norfair Bubbles</p>
+        </div>
+        <div id="casaCampo" class="modal">
+            <img src="CasaCampo10X.png" alt="Casa no Campo">
+            <span class="close">&times;</span>
+            <p>Casa no Campo</p>
+        </div>
+    </section>
+</body>
+<script>
+    var norfair = document.getElementById('norfair')
+    var fechaNorfair = norfair.getElementsByClassName('close')[0];
+    var btnNorfair = document.getElementById('norbut')
+    btnNorfair.onclick = function() {
+        norfair.style.display = "block";
+    }
+    fechaNorfair.onclick = function() {
+        norfair.style.display = "none";
+    }
+
+    var casaCampo = document.getElementById('casaCampo')
+    var fechaCasaCampo = casaCampo.getElementsByClassName('close')[0];
+    var btnCasaCampo = document.getElementById('campobut')
+    btnCasaCampo.onclick = function() {
+        casaCampo.style.display = "block";
+    }
+    fechaCasaCampo.onclick = function() {
+        casaCampo.style.display = "none";
+    }
+
+</script>
+</html>

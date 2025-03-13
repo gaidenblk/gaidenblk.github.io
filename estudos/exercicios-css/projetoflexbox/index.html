@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/assets/gakih.png" type="image/x-icon" />
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="/main.css" />
+		<title>FlexBox</title>
+	</head>
+	<body>
+		<main id="content">
+			<header>
+				<h1>Minhas Pixel Arts</h1>
+				<p>Amostra prática de como a propriedades do FlexBox
+					reorganizam o conteúdo na página. <br><strong>Clique nos botões e veja a magia acontecer!</strong></p>
+			</header>
+			<session id="divTop">
+				<div>
+					<button id="btnColuna" class="btnFlex">column</button>
+					<div>
+						<p><strong>flex-direction = column:</strong> Empilha os elementos como se fosse uma coluna.</p>
+					</div>
+				</div>
+				<div>
+					<button id="btnRvsColuna" class="btnFlex">column-reverse</button>
+					<div>
+						<p><strong>flex-direction = column-reverse:</strong> Faz o mesmo que o column só inverte a ordem
+							de
+							exibição.</p>
+					</div>
+				</div>
+				<div>
+					<button id="btnLinha" class="btnFlex">row</button>
+					<div>
+						<p><strong>flex-direction = row:</strong> Organiza os elementos em uma linha horizontal.</p>
+					</div>
+				</div>
+				<div>
+					<button id="btnRvsLinha" class="btnFlex">row-reverse</button>
+					<div>
+						<p><strong>flex-direction = row-reverse:</strong> Faz o mesmo que o row apenas inverte a ordem
+							de
+							exibição.</p>
+					</div>
+				</div>
+			</session>
+			<div id="divMid">
+				<div>
+					<button id="btnFlexwrap">flexwrap</button>
+					<p><strong>flexwrap: </strong>Embrulhamento do conteúdo, podemos definir se o conteúdo fica embrulhado
+						ou
+						solto com os atributos <strong>wrap</strong> e <strong>nowrap</strong>.</p>
+				</div>
+				<div>
+					<button id="btnAlignitems">align-items</button>
+					<p><strong>align-items:</strong> Alinha o conteúdo com base no eixo vertical, aqui podemos alterar para
+						o
+						atributo <strong>flex-start</strong>, <strong>center</strong> ou <strong>flex-end</strong>.</p>
+				</div>
+				<div>
+					<button id="btnJustifyctt">justify-content</button>
+					<p><strong>justify-content:</strong> Alinha o conteúdo com base no eixo horizontal, aqui podemos alterar
+						para o atributo <strong>flex-start</strong>, <strong>center</strong> ou <strong>flex-end</strong>.
+					</p>
+				</div>
+			</div>
+			<div id="divBot">
+				<p>* Há várias outras propriedades a serem exploradas com o FlexBox, aqui temos apenas alguns dos exemplos
+					mais comuns!</p>
+			</div>
+			<div id="flexDiv">
+				<img src="./img/CasaCampo10X.png" alt="Casa no Campo">
+				<img src="./img/lilcar16X.png" alt="Carrinho">
+				<img src="./img/melancia10x.png" alt="Melancia">
+				<img src="./img/Norfair Bubbles Tv10X.png" alt="Bolhas de Norfair">
+				<img src="./img/PixelFarm10X.png" alt="Fazendinha Pixel">
+				<img src="./img/VacuumSpace10X.png" alt="Vácuo Espacial">
+			</div>
+		</main>
+		<script src="./js/script.js"></script>
+		<script src="/main.js"></script>
+	</body>
+</html>
