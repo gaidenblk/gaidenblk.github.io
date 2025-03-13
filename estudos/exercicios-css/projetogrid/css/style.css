@@ -30,13 +30,14 @@
 #webshocker {
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	left: -16px;
+	width: 105%;
 	color: white;
 	align-items: center;
 	text-align: center;
 	font-size: large;
 	overflow: visible;
-	margin-left: 10%;
-	margin-right: 10%;
 }
 
 .button {
@@ -62,7 +63,7 @@
 #figures {
 	position: relative;
 	left: -16px;
-	width: 103%;
+	width: 105%;
 	color: black;
 	background-color: antiquewhite;
 	text-align: center;
@@ -98,7 +99,7 @@
 #bottom {
 	position: relative;
 	left: -16px;
-	width: 103%;
+	width: 105%;
 	background-color: antiquewhite;
 	text-align: center;
 	display: flex;
