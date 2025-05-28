@@ -1,0 +1,48 @@
+/* Redes sociais */
+.contato-container {
+	max-width: 90%;
+	margin: 0 auto;
+	padding: 2rem;
+	background-color: #ffffff;
+	border-radius: 16px;
+	box-shadow: 2px 2px 0px 3px var(--base-color);
+	text-align: center;
+}
+
+.contato-container h2 {
+	color: #d63031;
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.contato-container p {
+	font-size: 1.1rem;
+	margin-bottom: 2rem;
+}
+
+.redes-grid {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.rede {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	color: #333;
+	transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.rede:hover {
+	transform: scale(1.05);
+	color: #d63031;
+}
+
+.rede img {
+	width: 60px;
+	height: 60px;
+	margin-bottom: 0.5rem;
+}

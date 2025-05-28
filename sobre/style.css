@@ -1,0 +1,78 @@
+/* Container principal */
+.sobre-mim-container {
+	max-width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+/* Cada bloco com texto e imagem */
+.bloco {
+	background-color: #fff;
+	border-radius: 16px;
+	box-shadow: 2px 2px 0px 3px var(--base-color);
+	overflow: hidden;
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 1rem;
+	align-items: center;
+	padding: 12px;
+	transition: transform 0.2s ease;
+}
+
+.bloco:hover {
+	transform: translateY(-4px);
+}
+
+/* Imagens */
+.imagem-bloco {
+	flex: 1;
+	height: 200px;
+	max-height: 350px;
+	max-width: 200px;
+	border-radius: 12px;
+	object-fit: cover;
+	box-shadow: 2px 2px 0px 3px var(--base-color);
+}
+
+/* Texto */
+.texto-bloco {
+	flex: 3;
+}
+
+.texto-bloco h2 {
+	font-size: 2rem;
+	color: #d63031;
+	margin-bottom: 0.5rem;
+}
+
+.texto-bloco p {
+	font-size: 1.1rem;
+	margin-bottom: 0.8rem;
+}
+
+code {
+	background-color: #f0f0f0;
+	padding: 2px 6px;
+	border-radius: 6px;
+	font-family: monospace;
+	color: #0984e3;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+	.bloco {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.imagem-bloco {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.texto-bloco {
+		flex: none;
+	}
+}
