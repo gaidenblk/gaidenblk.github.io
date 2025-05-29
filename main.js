@@ -51,7 +51,6 @@ document.addEventListener("click", (event) => {
 });
 
 function carregarConteudo(url) {
-	// Verifica se a URL está duplicada e corrige se necessário
 	if (url.startsWith(window.location.origin)) {
 		url = url.replace(window.location.origin, "");
 	}
@@ -61,26 +60,25 @@ function carregarConteudo(url) {
 			const parser = new DOMParser();
 			const doc = parser.parseFromString(html, "text/html");
 
-			// Realiza procedimento de transição de telas com animação
-			document.querySelector("#content").style.animation = "sumirDireita 0.5s ease";
+			const content = document.querySelector("#content");
 
-			// Complementa fim da animação
-			setTimeout(
-				() => (
-					// Carrega o CSS primeiro e aguarda o carregamento
-					carregarCSS(doc),
-					// Atualiza o conteúdo da página
-					(document.querySelector("#content").innerHTML =
-						doc.querySelector("#content").innerHTML),
-					// Executar os scripts da nova página manualmente
-					executarScripts(doc),
-					// Finaliza com a animação
-					(document.querySelector("#content").style.animation = "aparecerEsquerda 1s ease")
-				),
-				350,
-			);
+			// Aplica animação de saída
+			content.style.animation = "sumirDireita 0.7s ease forwards";
 
-			// Atualiza o título da página, opcionalmente
+			setTimeout(() => {
+				// Carrega o CSS
+				carregarCSS(doc);
+
+				// Substitui o conteúdo
+				content.innerHTML = doc.querySelector("#content").innerHTML;
+
+				// Executa os scripts da nova página
+				executarScripts(doc);
+
+				// Aplica animação de entrada
+				content.style.animation = "aparecerEsquerda 0.7s ease forwards";
+			}, 350);
+
 			document.title = doc.title;
 		})
 		.catch((error) => console.error("Erro ao carregar o conteúdo:", error));
@@ -141,12 +139,14 @@ async function carregarSideNavBar(url) {
 
 	sideNavbar = elementoBase.querySelector("nav");
 	sideNavbar.style.animation = "aparecerDireita 1s ease";
-	document.querySelector("#content").style.marginLeft = "250px";
+	document.querySelector("#content").style.marginLeft =
+		window.innerWidth > 650 ? "250px" : "150px";
 	document.querySelector("body").prepend(sideNavbar);
 
 	sideNavBtn = elementoBase.querySelector("button");
 	sideNavBtn.style.animation = "aparecerDireita 1s ease";
-	document.querySelector("#content").style.marginLeft = "250px";
+	document.querySelector("#content").style.marginLeft =
+		window.innerWidth > 650 ? "250px" : "150px";
 	document.querySelector("body").prepend(sideNavBtn);
 
 	sideNavBtn.addEventListener("click", () => {
@@ -162,7 +162,8 @@ async function carregarSideNavBar(url) {
 		sideNavBtn.innerText = "<";
 		sideNavbar.style.animation = "aparecerDireita 1s ease";
 		sideNavBtn.style.animation = "aparecerDireita 1s ease";
-		document.querySelector("#content").style.marginLeft = "250px";
+		document.querySelector("#content").style.marginLeft =
+			window.innerWidth > 650 ? "250px" : "150px";
 		document.querySelector("body").prepend(sideNavbar);
 	});
 
@@ -275,6 +276,18 @@ function executarScripts(doc) {
 
 	return Promise.all(promises);
 }
+
+// Fecha menu hamburguer com clique fora
+document.addEventListener("mousedown", (e) => {
+	const check = document.getElementById("check");
+	const menu = document.querySelector(".menu");
+	const label = document.querySelector("label[for='check']");
+
+	// Se o menu estiver aberto e o clique for fora do menu e do botão
+	if (check.checked && !menu.contains(e.target) && !label.contains(e.target)) {
+		check.checked = false; // Fecha o menu
+	}
+});
 
 window.addEventListener("popstate", () => {
 	if (window.location.hash.includes("#")) {

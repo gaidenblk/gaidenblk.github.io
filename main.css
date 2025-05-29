@@ -111,9 +111,16 @@ td {
 
 #content {
 	margin-top: 45px;
+	margin-left: 250px;
 	transition: ease 0.8s;
 	flex: 1;
 	padding: 1rem;
+
+	/* Impede overflow lateral durante a animação */
+	width: 100vw;
+	max-width: 100vw;
+	overflow-x: hidden;
+	position: relative;
 }
 
 #btnExplicacao {
@@ -203,7 +210,6 @@ td {
 	justify-items: center;
 	align-items: center;
 	height: 100%;
-	margin-right: 5%;
 }
 
 .menu > li,
@@ -364,6 +370,97 @@ td {
 	width: fit-content;
 }
 
+label > i {
+	font-size: 30px;
+	cursor: pointer;
+	top: -3px;
+	right: 15px;
+	position: fixed;
+	display: none;
+}
+
+#check {
+	display: none;
+}
+
+/* Area reservada a MediaQueries */
+
+@media (max-width: 650px) {
+	.sideNavbar {
+		margin-top: 35px;
+		width: 150px;
+	}
+
+	.sideNavBtn {
+		margin-top: 35px;
+		height: calc(100vh - 35px);
+	}
+
+	label #menuBtn {
+		display: block;
+	}
+
+	.logo > img {
+		width: 30px;
+	}
+
+	.logo > a > img {
+		height: 20px;
+	}
+
+	#content {
+		margin-top: 35px;
+		margin-left: 150px;
+	}
+
+	.header {
+		height: 35px;
+	}
+
+	/* Esconde o menu por padrão */
+	.menu {
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 35px;
+		width: 150px;
+		height: 100vh;
+		background: var(--base-color);
+	}
+
+	/* Mostra o menu quando o checkbox estiver marcado */
+	#check:checked ~ .menu {
+		display: block;
+	}
+
+	#check:checked ~ label #menuBtn {
+		display: none;
+	}
+
+	#check:checked ~ label #menuCncl {
+		display: block;
+	}
+
+	.menu li > a {
+		color: antiquewhite;
+	}
+
+	.menu li:hover,
+	.menu li:hover > a,
+	.menu li:hover > .submenu,
+	.submenu li:hover,
+	.submenu2 li:hover {
+		color: #d63031 !important;
+	}
+
+	.menu li:hover > .submenu,
+	.submenu li:hover > .submenu2 {
+		display: none !important;
+	}
+}
+
+/* Area reservada a AMIMAÇÕES */
+
 /* Define a animação chamada 'moverLado' */
 @keyframes moverLado {
 	0% {
@@ -400,7 +497,7 @@ td {
 /* Define a animação combinada chamada 'aparecer' */
 @keyframes aparecerEsquerda {
 	0% {
-		transform: translateX(25%);
+		transform: translateX(-25%);
 		opacity: 0%;
 	}
 	100% {
