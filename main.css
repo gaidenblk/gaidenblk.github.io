@@ -111,7 +111,6 @@ td {
 
 #content {
 	margin-top: 45px;
-	margin-left: 250px;
 	transition: ease 0.8s;
 	flex: 1;
 	padding: 1rem;
@@ -410,7 +409,6 @@ label > i {
 
 	#content {
 		margin-top: 35px;
-		margin-left: 150px;
 	}
 
 	.header {
@@ -422,7 +420,7 @@ label > i {
 		display: none;
 		flex-direction: column;
 		position: absolute;
-		top: 35px;
+		top: 36px;
 		width: 150px;
 		height: 100vh;
 		background: var(--base-color);
