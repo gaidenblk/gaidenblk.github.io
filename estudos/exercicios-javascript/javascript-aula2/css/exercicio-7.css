@@ -1,16 +1,21 @@
-#container {
-  display: flex;
+#exercicio {
+	display: flex;
+	flex-wrap: wrap;
 }
 
-#container > div {
-  cursor: pointer;
-  transition: ease 0.4s;
-  border: 5px solid;
-  border-radius: 5px;
-  border-color: black;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  width: 100px;
-  height: 100px;
+#exercicio > div {
+	cursor: pointer;
+	transition: ease 0.4s;
+	border: 5px solid;
+	border-radius: 5px;
+	border-color: black;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 100px;
+	height: 100px;
+}
+
+img {
+	width: 100%;
 }

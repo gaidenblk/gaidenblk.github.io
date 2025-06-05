@@ -63,7 +63,7 @@ function carregarConteudo(url) {
 			const content = document.querySelector("#content");
 
 			// Aplica animação de saída
-			content.style.animation = "sumirDireita 0.7s ease forwards";
+			content.style.animation = "sumirEsquerda 0.7s ease forwards";
 
 			setTimeout(() => {
 				// Carrega o CSS
@@ -76,7 +76,7 @@ function carregarConteudo(url) {
 				executarScripts(doc);
 
 				// Aplica animação de entrada
-				content.style.animation = "aparecerEsquerda 0.7s ease forwards";
+				content.style.animation = "aparecerDireita 0.7s ease forwards";
 			}, 350);
 
 			document.title = doc.title;
@@ -115,7 +115,7 @@ async function carregarSideNavBar(url) {
 			if (sideNavBtn) sideNavBtn.style.animation = "sumirEsquerda 0.5s ease";
 			setTimeout(() => {
 				removeSideNavBar();
-			}, 350);
+			}, 450);
 		}
 		return;
 	}
@@ -151,7 +151,7 @@ async function carregarSideNavBar(url) {
 
 	sideNavBtn.addEventListener("click", () => {
 		if (document.body.contains(sideNavbar)) {
-			sideNavbar.style.animation = "sumirEsquerda 0.5s ease forwards";
+			sideNavbar.style.animation = "sumirEsquerda 0.7s ease forwards";
 			sideNavBtn.innerText = ">";
 			document.querySelector("#content").style.marginLeft = "10px";
 			setTimeout(() => {
@@ -277,7 +277,7 @@ function executarScripts(doc) {
 	return Promise.all(promises);
 }
 
-// Fecha menu hamburguer com clique fora
+// Eventos de exibição do menu mobile
 document.addEventListener("mousedown", (e) => {
 	const check = document.getElementById("check");
 	const menu = document.querySelector(".menu");
@@ -285,7 +285,14 @@ document.addEventListener("mousedown", (e) => {
 
 	// Se o menu estiver aberto e o clique for fora do menu e do botão
 	if (check.checked && !menu.contains(e.target) && !label.contains(e.target)) {
-		check.checked = false; // Fecha o menu
+		// Aplica animação de saída
+		menu.style.animation = "sumirDireita 0.4s ease";
+
+		// Espera a animação terminar antes de fechar
+		setTimeout(() => {
+			check.checked = false; // Fecha o menu
+			menu.style.animation = ""; // Limpa a animação para reusar depois
+		}, 350);
 	}
 });
 

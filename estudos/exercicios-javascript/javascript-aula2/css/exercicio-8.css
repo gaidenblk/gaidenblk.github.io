@@ -20,12 +20,11 @@
 #modalEbook {
 	font-size: 0.7rem;
 	display: none;
+	max-width: 400px;
 	background-color: white;
 	padding: 20px;
-	top: 25vh;
-	left: 25vw;
+	margin: 20vw;
 	position: absolute;
-	width: 350px;
 	border-radius: 15px;
 }
 #botaoFecha {

@@ -141,7 +141,6 @@ td {
 }
 
 #exercicio {
-	word-break: break-all;
 	width: fit-content;
 	border: solid purple;
 	border-radius: 15px;
@@ -429,6 +428,7 @@ label > i {
 	/* Mostra o menu quando o checkbox estiver marcado */
 	#check:checked ~ .menu {
 		display: block;
+		animation: aparecerEsquerda 0.5s ease;
 	}
 
 	#check:checked ~ label #menuBtn {
@@ -454,6 +454,10 @@ label > i {
 	.menu li:hover > .submenu,
 	.submenu li:hover > .submenu2 {
 		display: none !important;
+	}
+
+	#exercicio {
+		flex-direction: column;
 	}
 }
 
@@ -495,7 +499,7 @@ label > i {
 /* Define a animação combinada chamada 'aparecer' */
 @keyframes aparecerEsquerda {
 	0% {
-		transform: translateX(-25%);
+		transform: translateX(25%);
 		opacity: 0%;
 	}
 	100% {
