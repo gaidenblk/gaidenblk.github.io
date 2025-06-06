@@ -129,6 +129,7 @@ td {
 	width: 25px;
 	height: 25px;
 	border-radius: 50%;
+	z-index: 2;
 }
 
 #explicacao {
@@ -137,7 +138,6 @@ td {
 	padding: 7px;
 	margin-right: 5px;
 	margin-bottom: 5px;
-	width: fit-content;
 }
 
 #exercicio {
@@ -146,6 +146,20 @@ td {
 	border-radius: 15px;
 	margin-right: 5px;
 	padding: 7px;
+}
+
+#exercicio ul,
+li {
+	list-style-type: unset;
+	list-style: unset;
+	margin-left: 10px;
+}
+
+#explicacao ul,
+li {
+	list-style-type: unset;
+	list-style: unset;
+	margin-left: 10px;
 }
 
 /* Seção do HEADER*/

@@ -1,19 +1,16 @@
-#container {
-  display: flex;
-}
-img {
-  border: 2px solid;
-  border-radius: 5px;
-  margin: 2px;
-  width: 100px;
-  cursor: pointer;
+#content img {
+	border: 2px solid;
+	border-radius: 5px;
+	margin: 2px;
+	width: 100px;
+	cursor: pointer;
 }
 #pneuCheio {
-  display: none;
-  position: absolute;
-  top: 0;
-  z-index: 2;
+	display: none;
+	position: absolute;
+	top: 0;
+	z-index: 2;
 }
 #pneuMurcho {
-  position: relative;
+	position: relative;
 }
