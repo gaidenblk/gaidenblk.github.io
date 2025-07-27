@@ -1,0 +1,188 @@
+[
+	{
+		"titulo": "Árvore",
+		"arquivo": "/pixelarts/img/Arvore10x.gif",
+		"descricao": "Um dos primeiros projetos de animação que desenvolvi",
+		"tamanho": "size-2x2"
+	},
+	{
+		"titulo": "Baú Tesouro",
+		"arquivo": "/pixelarts/img/BauTesouro10X.png",
+		"descricao": "Treino rápido feito em uma lapada só sem camadas e em apenas 1h",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Lua sobre Lago",
+		"arquivo": "/pixelarts/img/Lualagolarge.gif",
+		"descricao": "Minha primeira arte de Logo",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Beija Flor",
+		"arquivo": "/pixelarts/img/BeijaFlor10X.png",
+		"descricao": "Sempre quis desenhar esse bonitão",
+		"tamanho": "size-2x1"
+	},
+	{
+		"titulo": "Casa no Campo",
+		"arquivo": "/pixelarts/img/CasaCampo10X.png",
+		"descricao": "Apenas um bom lugar para descansar...",
+		"tamanho": "size-2x2"
+	},
+	{
+		"titulo": "Pixel Emoji",
+		"arquivo": "/pixelarts/img/EmojiContest.png",
+		"descricao": "Projeto de entrada para um concurso de pixelarte",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Estante de Livros",
+		"arquivo": "/pixelarts/img/Estante10X.png",
+		"descricao": "Treino de formas, feito sem camadas",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Lago de Peixes",
+		"arquivo": "/pixelarts/img/FishPond.png",
+		"descricao": "Essa faz parte de um set de artes feito nessa paleta de cores",
+		"tamanho": "size-2x2"
+	},
+	{
+		"titulo": "Apenas um Emoji",
+		"arquivo": "/pixelarts/img/G10X.png",
+		"descricao": "Um remodel do Pixel emoji de boné",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Logo Lua",
+		"arquivo": "/pixelarts/img/gakihb.png",
+		"descricao": "Logo sem o nome",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Minha linda esposa!",
+		"arquivo": "/pixelarts/img/kenny10X.png",
+		"descricao": "Treinando retratos, resolvi desenhar minha linda!",
+		"tamanho": "size-2x2"
+	},
+	{
+		"titulo": "Peixinho beta BlackComet",
+		"arquivo": "/pixelarts/img/goldenfish-blackcomet10x.png",
+		"descricao": "Arte para treino diário",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Melancia",
+		"arquivo": "/pixelarts/img/melancia10x.png",
+		"descricao": "Arte para treino diário",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Set de Chá",
+		"arquivo": "/pixelarts/img/MesaCadeiras10X.png",
+		"descricao": "Treino rápido feito em uma lapada só sem camadas e em apenas 1h",
+		"tamanho": "size-2x1"
+	},
+	{
+		"titulo": "MiniKnight",
+		"arquivo": "/pixelarts/img/MiniKnight10X.png",
+		"descricao": "Apenas um conceito de personagem",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Náufrago",
+		"arquivo": "/pixelarts/img/naufragoa10x.png",
+		"descricao": "Outro conceito de personagem, inspirado em um amigo meu",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Norfair Bubbles na Tv",
+		"arquivo": "/pixelarts/img/NorfairBubblesTv10X.png",
+		"descricao": "Remodel da arte na paleta cute pastel, acabei decidindo colocar numa 'moldura' de tv",
+		"tamanho": "size-2x2"
+	},
+	{
+		"titulo": "Pc anos 90",
+		"arquivo": "/pixelarts/img/pc9010X.png",
+		"descricao": "Uma das primeiras pixel arts",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Novas Asas",
+		"arquivo": "/pixelarts/img/novasasas10Xb.gif",
+		"descricao": "Primeiro projeto de animação focado no frame-a-frame",
+		"tamanho": "size-2x1"
+	},
+	{
+		"titulo": "Ovo Frito",
+		"arquivo": "/pixelarts/img/ovofrito10X.png",
+		"descricao": "Uma das primeiras pixel arts",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Pitanga",
+		"arquivo": "/pixelarts/img/pitangab10X.png",
+		"descricao": "Treino rápido feito em uma lapada só sem camadas e em apenas 1h",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Pixel Farm",
+		"arquivo": "/pixelarts/img/PixelFarm10X.png",
+		"descricao": "Uma tentativa de completar o septembit do SaulToons",
+		"tamanho": "size-2x2"
+	},
+	{
+		"titulo": "Rally Car",
+		"arquivo": "/pixelarts/img/RallyCar10X.gif",
+		"descricao": "Primeira versão do Rally car",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Cute Rally Car",
+		"arquivo": "/pixelarts/img/RallyCarCuteEx10X.gif",
+		"descricao": "Um remodel do Rally car, mas fofo...",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Cute Rally Car v3",
+		"arquivo": "/pixelarts/img/RallyCarCuteV3inst.gif",
+		"descricao": "Essa é uma versão revisada e expandida do Cute Rally Car",
+		"tamanho": "size-2x1"
+	},
+	{
+		"titulo": "Vector Rally Car",
+		"arquivo": "/pixelarts/img/RallyCarVector80s10X.gif",
+		"descricao": "Outro remodel do Rally Car",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Antena de Satélite",
+		"arquivo": "/pixelarts/img/SatelliteAntenna.png",
+		"descricao": "Outra arte feito com a paleta cute pastel",
+		"tamanho": "size-2x2"
+	},
+	{
+		"titulo": "Esqueleto",
+		"arquivo": "/pixelarts/img/Skeletor.png",
+		"descricao": "Outra arte feito com a paleta cute pastel",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Srta Franco",
+		"arquivo": "/pixelarts/img/SrtaFranco10X.gif",
+		"descricao": "Arte feito com amor de carinho, presente de aniversário",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Vácuo Espacial (Vaccum Space)",
+		"arquivo": "/pixelarts/img/VacuumSpace10X.png",
+		"descricao": "O trocadilho funciona melhor aqui em inglês...",
+		"tamanho": "size-2x2"
+	},
+	{
+		"titulo": "Joinha",
+		"arquivo": "/pixelarts/img/thumbsup10X.gif",
+		"descricao": "Apenas um joinha animado",
+		"tamanho": "size-1x1"
+	}
+]
