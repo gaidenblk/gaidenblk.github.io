@@ -18,7 +18,10 @@ document.addEventListener("click", function (event) {
 
 	// Se o link é uma âncora (começa com # ou contém o atual location.pathname)
 	if (!url) return;
-	if (url.startsWith("#") || (url.startsWith(location.pathname) && url.includes("#"))) {
+	if (
+		url.startsWith("#") ||
+		(url.startsWith(location.pathname) && url.includes("#"))
+	) {
 		return; // Deixa o navegador executar o comportamento padrão
 	}
 
@@ -45,7 +48,8 @@ document.addEventListener("click", (event) => {
 	if (event.target.id === "btnExplicacao") {
 		const explicacao = event.target.nextElementSibling; // A div explicação vem logo depois do botão
 		if (explicacao && explicacao.id === "explicacao") {
-			explicacao.style.display = explicacao.style.display === "none" ? "block" : "none";
+			explicacao.style.display =
+				explicacao.style.display === "none" ? "block" : "none";
 		}
 	}
 });
@@ -180,7 +184,9 @@ function carregarCSS(doc) {
 	const head = document.querySelector("head");
 
 	// Seleciona todos os <link> que apontam para CSS já existentes no head
-	const existingLinks = Array.from(head.querySelectorAll('link[rel="stylesheet"]'));
+	const existingLinks = Array.from(
+		head.querySelectorAll('link[rel="stylesheet"]'),
+	);
 
 	// Seleciona todos os <link> que apontam para CSS no novo documento
 	const newLinks = Array.from(doc.querySelectorAll('link[rel="stylesheet"]'));
@@ -189,7 +195,9 @@ function carregarCSS(doc) {
 
 	// Remove CSS que não está mais presente no novo documento
 	existingLinks.forEach((existingLink) => {
-		const isPresentInNewDoc = newLinks.some((newLink) => newLink.href === existingLink.href);
+		const isPresentInNewDoc = newLinks.some(
+			(newLink) => newLink.href === existingLink.href,
+		);
 		if (!isPresentInNewDoc) {
 			existingLink.remove();
 		}
@@ -228,7 +236,8 @@ function carregarScript(url, type) {
 			scriptsCarregados.push(script);
 			resolve();
 		};
-		script.onerror = () => reject(new Error(`Erro ao carregar o script: ${url}`));
+		script.onerror = () =>
+			reject(new Error(`Erro ao carregar o script: ${url}`));
 		document.body.appendChild(script);
 	});
 }
@@ -305,4 +314,8 @@ window.addEventListener("popstate", () => {
 });
 
 // Define o estado inicial ao carregar a página
-window.history.replaceState({ url: window.location.pathname }, "", window.location.pathname);
+window.history.replaceState(
+	{ url: window.location.pathname },
+	"",
+	window.location.pathname,
+);

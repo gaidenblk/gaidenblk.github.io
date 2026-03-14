@@ -101,12 +101,7 @@
 		"descricao": "Remodel da arte na paleta cute pastel, acabei decidindo colocar numa 'moldura' de tv",
 		"tamanho": "size-2x2"
 	},
-	{
-		"titulo": "Pc anos 90",
-		"arquivo": "/pixelarts/img/pc9010X.png",
-		"descricao": "Uma das primeiras pixel arts",
-		"tamanho": "size-1x1"
-	},
+
 	{
 		"titulo": "Novas Asas",
 		"arquivo": "/pixelarts/img/novasasas10Xb.gif",
@@ -183,6 +178,12 @@
 		"titulo": "Joinha",
 		"arquivo": "/pixelarts/img/thumbsup10X.gif",
 		"descricao": "Apenas um joinha animado",
+		"tamanho": "size-1x1"
+	},
+	{
+		"titulo": "Pc anos 90",
+		"arquivo": "/pixelarts/img/pc9010X.png",
+		"descricao": "Uma das primeiras pixel arts",
 		"tamanho": "size-1x1"
 	}
 ]

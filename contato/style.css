@@ -33,7 +33,9 @@
 	align-items: center;
 	text-decoration: none;
 	color: #333;
-	transition: transform 0.2s ease, color 0.2s ease;
+	transition:
+		transform 0.2s ease,
+		color 0.2s ease;
 }
 
 .rede:hover {
@@ -45,4 +47,13 @@
 	width: 60px;
 	height: 60px;
 	margin-bottom: 0.5rem;
+}
+
+#content {
+	width: 100dvw;
+	min-height: 700px;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	align-items: center;
 }

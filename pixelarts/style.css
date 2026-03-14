@@ -1,7 +1,6 @@
 #gallery {
 	margin-top: 0;
 	width: calc(95vw);
-	background-color: white;
 	border-bottom: 1px solid #ccc;
 	z-index: 1;
 }
@@ -14,6 +13,7 @@
 }
 
 .pixelArt {
+	background-color: white;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
