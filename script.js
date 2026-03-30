@@ -8,26 +8,32 @@
 		"/html/pixelArtContainer.html",
 	);
 
-	fetch("/pixelarts/dadosGaleria.json")
-		.then((response) => response.json())
-		.then((data) => {
-			// Clona o template
-			const clone = template.cloneNode(true);
+	let dadosGaleria = [];
 
-			// Pega uma imagem aleatoria da galeria
-			const indice = Math.floor(Math.random() * data.length);
-			const img = data[indice];
+	if (sessionStorage.getItem("galeriaPixel")) {
+		dadosGaleria = JSON.parse(sessionStorage.getItem("galeriaPixel"));
+	} else {
+		await fetch("/pixelarts/dadosGaleria.json")
+			.then((response) => response.json())
+			.then((data) => {
+				dadosGaleria = data;
+				sessionStorage.setItem("galeriaPixel", JSON.stringify(data));
+			})
+			.catch((error) => console.error("Erro ao carregar o JSON:", error));
+	}
 
-			// Preenche os dados no clone
-			clone.querySelector(".titulo").textContent = img.titulo;
-			clone.querySelector("img").src = img.arquivo;
-			clone.querySelector("img").alt = img.titulo;
-			clone.querySelector("img").loading = "lazy";
-			clone.querySelector(".descricao").textContent = img.descricao;
-			clone.classList.add(img.tamanho);
+	// Pega uma imagem aleatoria da galeria
+	const indice = Math.floor(Math.random() * dadosGaleria.length);
+	const img = dadosGaleria[indice];
 
-			// Adiciona no container principal
-			imgIntro.appendChild(clone);
-		})
-		.catch((error) => console.error("Erro ao carregar o JSON:", error));
+	// Preenche os dados no template
+	template.querySelector(".titulo").textContent = img.titulo;
+	template.querySelector("img").src = img.arquivo;
+	template.querySelector("img").alt = img.titulo;
+	template.querySelector("img").loading = "lazy";
+	template.querySelector(".descricao").textContent = img.descricao;
+	template.classList.add(img.tamanho);
+
+	// Adiciona no container principal
+	imgIntro.appendChild(template);
 })();
