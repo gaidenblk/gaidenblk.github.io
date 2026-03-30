@@ -19,6 +19,7 @@ code {
 }
 
 body {
+	height: 100dvh;
 	margin: 0;
 	display: flex;
 	overflow-x: hidden;

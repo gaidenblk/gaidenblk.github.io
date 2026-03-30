@@ -1,6 +1,6 @@
 #content {
 	width: 100dvw;
-	min-height: 650px;
+	min-height: 550px;
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
@@ -19,7 +19,7 @@ h2 {
 
 #imgIntro {
 	background-color: white;
-	width: 35vw;
+	width: 32vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -31,7 +31,8 @@ h2 {
 
 #imgIntro img {
 	width: 100%;
-	object-fit: cover;
+	max-height: 77dvh;
+	object-fit: contain;
 }
 
 #imgIntro h3,
@@ -39,4 +40,21 @@ h2 {
 	color: black;
 	font-family: monospace;
 	margin: 8px 0;
+}
+
+@media (max-width: 1015px) {
+	#content {
+		flex-direction: column;
+		flex-wrap: nowrap;
+		max-width: 100dvw;
+	}
+
+	#intro {
+		margin-bottom: 5px;
+		font-size: medium;
+	}
+
+	#imgIntro {
+		width: 75%;
+	}
 }
