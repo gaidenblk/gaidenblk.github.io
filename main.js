@@ -198,14 +198,16 @@ function carregarCSS(doc) {
 		const isPresentInNewDoc = newLinks.some(
 			(newLink) => newLink.href === existingLink.href,
 		);
-		if (!isPresentInNewDoc) {
+		// Força a remoção do arquivo que foi adicionado no primeiro carregamento
+		if (!isPresentInNewDoc || existingLink.href.includes("/style.css")) {
 			existingLink.remove();
 		}
 	});
 
 	newLinks.forEach((newLink) => {
 		const existingLink = document.querySelector(`link[href="${newLink.href}"]`);
-		if (!existingLink) {
+		// Garante que o arquivo /main.css não seja adicionado novamente
+		if (!existingLink && !newLink.href.includes("/main.css")) {
 			const newCSSLink = document.createElement("link");
 			newCSSLink.rel = "stylesheet";
 			newCSSLink.href = newLink.href;

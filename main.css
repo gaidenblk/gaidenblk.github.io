@@ -358,7 +358,7 @@ label > i {
 
 /* Area reservada a MediaQueries */
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
 	.sideNavbar {
 		margin-top: 35px;
 		width: 150px;

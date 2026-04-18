@@ -51,7 +51,6 @@
 
 #content {
 	width: 100dvw;
-	min-height: 700px;
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
