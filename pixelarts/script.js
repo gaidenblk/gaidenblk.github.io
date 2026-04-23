@@ -59,6 +59,11 @@
 				galleryModal.style.display = "none";
 			});
 
+			document.querySelector("header").addEventListener("click", () => {
+				imgModal.remove();
+				galleryModal.style.display = "none";
+			});
+
 			galleryModal.appendChild(imgModal);
 		});
 

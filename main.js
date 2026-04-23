@@ -67,7 +67,7 @@ function carregarConteudo(url) {
 			const content = document.querySelector("#content");
 
 			// Aplica animação de saída
-			content.style.animation = "sumirEsquerda 0.7s ease forwards";
+			content.style.animation = "sumirEsquerda 0.5s ease forwards";
 
 			setTimeout(() => {
 				// Carrega o CSS
@@ -82,6 +82,11 @@ function carregarConteudo(url) {
 				// Aplica animação de entrada
 				content.style.animation = "aparecerDireita 0.7s ease forwards";
 			}, 350);
+
+			// Remove a animação para evitar conflitos com Modais
+			content.addEventListener("animationend", () => {
+				content.style.animation = "none";
+			});
 
 			document.title = doc.title;
 		})
