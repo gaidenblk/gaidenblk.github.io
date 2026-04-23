@@ -1,8 +1,6 @@
 #content {
 	text-align: center;
 	background-color: lightgoldenrodyellow;
-	position: relative;
-	height: calc(100vh - 77px);
 }
 #content h1 {
 	border: 2px solid;
@@ -18,53 +16,54 @@
 	display: block;
 	color: blueviolet;
 }
-#content > div {
-	display: inline;
-}
 #content div p {
 	border: none;
 	font-weight: bold;
 	font-size: larger;
 	color: azure;
 }
-#norfair {
+#content > div {
+	display: inline;
+}
+.modal {
 	display: none;
+	position: absolute !important;
 	position: fixed;
 	z-index: 1;
-	padding-top: 100px;
-	left: 0;
 	top: 0;
+	right: 0;
 	width: 100%;
 	height: 100%;
 	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.4);
 }
 
-#casaCampo {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	padding-top: 100px;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.4);
+.imagem {
+	object-fit: contain;
+	display: inline-block;
+	position: relative;
 }
 
-.modal > img {
-	width: 50%;
+.imagem > img {
+	display: flex;
+	padding-top: 1em;
+	width: 100%;
+	max-width: 640px;
+	min-width: 64px;
 }
 
 .close {
 	position: absolute;
-	top: 90px;
-	right: 125px;
+	top: 10px;
+	right: -2px;
 	color: black;
 	float: right;
-	font-size: 28px;
+	font-size: 17px;
+	width: 25px;
+	height: 25px;
 	font-weight: bold;
+	border-radius: 50%;
+	background-color: white;
 }
 .close:hover,
 .close:focus {

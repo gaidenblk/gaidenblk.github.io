@@ -5,6 +5,9 @@
 	--cor-de-fundo-dark: rgb(46, 46, 46);
 	--cor-da-fonte-dark: aliceblue;
 }
+body {
+	overflow-y: hidden;
+}
 #voltarParaHome {
 	transition: ease 0.8s;
 	position: sticky;
@@ -48,6 +51,9 @@ a {
 	font-family: "Afacad", sans-serif;
 	text-align: center;
 	font-size: 1.3rem;
+	scrollbar-width: thin;
+	scrollbar-color: transparent transparent;
+	overflow-y: scroll;
 }
 #content.dark-mode {
 	color: var(--cor-da-fonte-dark);

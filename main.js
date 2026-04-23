@@ -144,13 +144,11 @@ async function carregarSideNavBar(url) {
 	sideNavbar = elementoBase.querySelector("nav");
 	sideNavbar.style.animation = "aparecerDireita 1s ease";
 	document.querySelector("#content").style.marginLeft =
-		window.innerWidth > 650 ? "250px" : "150px";
+		window.innerWidth > 750 ? "250px" : "150px";
 	document.querySelector("body").prepend(sideNavbar);
 
 	sideNavBtn = elementoBase.querySelector("button");
 	sideNavBtn.style.animation = "aparecerDireita 1s ease";
-	document.querySelector("#content").style.marginLeft =
-		window.innerWidth > 650 ? "250px" : "150px";
 	document.querySelector("body").prepend(sideNavBtn);
 
 	sideNavBtn.addEventListener("click", () => {
@@ -167,7 +165,7 @@ async function carregarSideNavBar(url) {
 		sideNavbar.style.animation = "aparecerDireita 1s ease";
 		sideNavBtn.style.animation = "aparecerDireita 1s ease";
 		document.querySelector("#content").style.marginLeft =
-			window.innerWidth > 650 ? "250px" : "150px";
+			window.innerWidth > 750 ? "250px" : "150px";
 		document.querySelector("body").prepend(sideNavbar);
 	});
 
