@@ -18,9 +18,9 @@
 		"tamanho": "size-1x1"
 	},
 	{
-		"titulo": "Beija Flor",
-		"arquivo": "/pixelarts/img/BeijaFlor10X.png",
-		"descricao": "Sempre quis desenhar esse bonitão",
+		"titulo": "Novas Asas",
+		"arquivo": "/pixelarts/img/novasasas10Xb.gif",
+		"descricao": "Primeiro projeto de animação focado no frame-a-frame",
 		"tamanho": "size-2x1"
 	},
 	{
@@ -101,13 +101,13 @@
 		"descricao": "Remodel da arte na paleta cute pastel, acabei decidindo colocar numa 'moldura' de tv",
 		"tamanho": "size-2x2"
 	},
-
 	{
-		"titulo": "Novas Asas",
-		"arquivo": "/pixelarts/img/novasasas10Xb.gif",
-		"descricao": "Primeiro projeto de animação focado no frame-a-frame",
+		"titulo": "Beija Flor",
+		"arquivo": "/pixelarts/img/BeijaFlor10X.png",
+		"descricao": "Sempre quis desenhar esse bonitão",
 		"tamanho": "size-2x1"
 	},
+
 	{
 		"titulo": "Ovo Frito",
 		"arquivo": "/pixelarts/img/ovofrito10X.png",
@@ -165,7 +165,7 @@
 	{
 		"titulo": "Srta Franco",
 		"arquivo": "/pixelarts/img/SrtaFranco10X.gif",
-		"descricao": "Arte feito com amor de carinho, presente de aniversário",
+		"descricao": "Arte feito com amor e carinho, presente de aniversário",
 		"tamanho": "size-1x1"
 	},
 	{
