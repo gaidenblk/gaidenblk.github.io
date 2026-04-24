@@ -50,16 +50,11 @@
 			clone.querySelector("img").alt = img.titulo;
 			clone.querySelector("img").loading = "lazy";
 			clone.querySelector(".descricao").textContent = img.descricao;
-			clone.classList.add(img.tamanho);
+			clone.classList.replace("pixelArt", "pixelArtModal");
 
 			imgModal.appendChild(clone);
 
 			imgModal.addEventListener("click", () => {
-				imgModal.remove();
-				galleryModal.style.display = "none";
-			});
-
-			document.querySelector("header").addEventListener("click", () => {
 				imgModal.remove();
 				galleryModal.style.display = "none";
 			});
